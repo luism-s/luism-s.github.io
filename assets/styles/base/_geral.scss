@@ -1,0 +1,11 @@
+body {
+    font-size: 10pt;
+}
+
+a {
+    color: black;
+    &, &:hover, &:focus{
+        text-decoration: none;
+        outline: none;
+    }
+}

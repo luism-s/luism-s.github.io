@@ -1,0 +1,25 @@
+$phone-height: 640px;
+$desktop-height: 640px;
+
+
+.phone {
+    padding: 50px 7px;
+    width: $phone-height / 1.777; 
+    height: $phone-height;
+}
+
+.desktop {
+    padding: 10px 10px 70px 10px;
+    width: $desktop-height / 1.777; 
+    height: $desktop-height;
+}
+
+.phone, .desktop {
+    overflow: hidden;
+    iframe {
+        border: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black; 
+    }
+}

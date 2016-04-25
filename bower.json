@@ -1,0 +1,34 @@
+{
+  "name": "myboilerplate",
+  "description": "myboilerplate",
+  "main": "index.html",
+  "authors": [
+    "Luis Miguel <luismiguel.s91@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "HTML5",
+    "boilerplate"
+  ],
+  "homepage": "https://github.com/luism-s/myBoilerPlate",
+  "moduleType": [],
+  "private": true,
+  "dependencies": {
+    "normalize-css": "^4.0.0",
+    "susy": "^2.2.12",
+    "jquery": "^2.2.2"
+  },
+  
+  "overrides": {
+    "jquery": {
+      "main": [
+        "./dist/jquery.min.js"
+      ]
+    },
+    "normalize-css": {
+      "main": [
+        "./normalize.css"
+      ]
+    }
+  }
+}
