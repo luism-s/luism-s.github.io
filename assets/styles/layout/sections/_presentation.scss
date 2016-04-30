@@ -19,7 +19,7 @@ section.presentation {
                 @include fadeIn(0.5s);
             }
             .profession {
-                @include fadeIn(0.5s, 0.5s);
+                @include fadeIn(0.75s, 0.5s);
             }
         }
 
