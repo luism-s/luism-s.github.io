@@ -1,5 +1,5 @@
 section.presentation {
-    background: $blue;
+    background: $color-one;
     color: white;
     z-index: 2;
     margin-bottom: 100vh;
@@ -12,6 +12,15 @@ section.presentation {
             font-family: 'Roboto', sans-serif;
             font-weight: 100;
             font-size: 22pt;
+            .name, .profession {
+                opacity: 0;
+            }
+            .name {
+                @include fadeIn(0.5s);
+            }
+            .profession {
+                @include fadeIn(0.5s, 0.5s);
+            }
         }
 
     }

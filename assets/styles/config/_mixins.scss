@@ -10,3 +10,10 @@
         clear: both;
     }
 }
+
+@mixin fadeIn ($durantion: 1s, $delay: 0s) {
+    animation: fadeIn ease-in-out 1;
+    animation-fill-mode: forwards;
+    animation-duration: $durantion;
+    animation-delay: $delay;
+}
