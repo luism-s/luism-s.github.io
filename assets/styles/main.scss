@@ -6,13 +6,15 @@
 @import 'base/fonts';
 
 @import 'components/icons';
+@import 'components/displays';
 
 @import 'config/animations';
 @import 'config/mixins';
 @import 'config/variables';
 
-@import 'layout/header';
 @import 'layout/footer';
 @import 'layout/section';
+
 @import 'layout/sections/presentation';
+@import 'layout/sections/portfolio';
 @import 'layout/sections/contacts';

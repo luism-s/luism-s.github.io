@@ -7,6 +7,12 @@ section.contacts {
     bottom: 0;
     left: 0;
     position: fixed;
+
+    .header {
+        h4 {
+            font-weight: normal;
+        }
+    }
     
     .content {
         position: absolute;
