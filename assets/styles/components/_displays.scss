@@ -1,10 +1,12 @@
 $device-height: 300px;
 
+$phone-ratio: 0.666;
 $phone-height: $device-height;
-$phone-width: $phone-height / 1.5;
+$phone-width: $phone-height * $phone-ratio;
 
+$desktop-ratio: 1.777;
 $desktop-height: $device-height;
-$desktop-width: $desktop-height *  1.777;
+$desktop-width: $desktop-height * $desktop-ratio;
 
 $device-border-width: $device-height / 35;
 $device-border-bottom-width: $device-height / 7;
@@ -41,4 +43,23 @@ $device-color: #ddd;
 .desktop {
     width: $desktop-width; 
     height: $desktop-height;
+}
+
+
+
+
+@media (max-width: 700px) {
+
+    .device .frame {
+        border-bottom: initial;
+        border: 8px solid;
+    }
+    .phone {
+        display: none;
+    }
+
+    .desktop {
+        height: 200px;
+        width: 85%;
+    }
 }

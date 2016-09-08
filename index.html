@@ -33,27 +33,8 @@
                 <h4>Portfolio</h4>
             </div>    
 
-            <div class="work" work_name="fista16">
-                <p>FISTA'16</p>
-                <img src="/dist/images/sites/fista16_desktop.png" alt="fista_desktop">
-                <div class="shadow"></div>
-            </div>
 
-            <div class="showcase" work_name="fista16">
-
-                <div class="device phone">
-                    <div class="frame">
-                        <img src="/dist/images/sites/fista16_mobile.png" alt="fista_mobile">
-                    </div>
-                </div>
-
-                <div class="device desktop">
-                    <div class="frame">
-                        <img src="/dist/images/sites/fista16_desktop.png" alt="fista_desktop">
-                    </div>
-                </div>
-            </div>
-
+            <div id="works"></div>
         </div>
     </section>
     
@@ -80,6 +61,30 @@
     
     <script src="/dist/scripts/main.js"></script>
 
+            <script id="works-template" type="mustache/x-tmpl">
+                {{#works}}
+                    <div class="work"  work_name="{{code}}">
+                        <p>{{name}}</p>
+                        <img src="{{png_desktop}}" alt="{{code}}">
+                        <div class="shadow"></div>
+                    </div>
+
+                    <div class="showcase" work_name="{{code}}">
+
+                        <div class="device phone">
+                            <div class="frame">
+                                <img src="{{png_mobile}}" alt="{{code}}">
+                            </div>
+                        </div>
+
+                        <div class="device desktop">
+                            <div class="frame">
+                                <img src="{{png_desktop}}" alt="{{code}}">
+                            </div>
+                        </div>
+                    </div>
+                {{/works}}
+            </script>
 </body>
 
 </html>

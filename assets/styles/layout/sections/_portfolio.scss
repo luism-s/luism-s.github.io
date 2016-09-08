@@ -8,7 +8,6 @@ section.portfolio {
         h4 {
             font-weight: normal;
         }
-        
     }
 
     .work {    
@@ -89,16 +88,36 @@ section.portfolio {
             height: 100%;
             position: absolute;
             z-index: 1;
-        }
-        .close-buttom {
-            position: absolute;
-            right: 5%;
-            top: 5%;
-            font-size: 30px;
-            cursor: pointer;
+            .close-buttom {
+                position: absolute;
+                right: 5%;
+                top: 5%;
+                font-size: 30px;
+                cursor: pointer;
+            }
         }
         
     }
 
     
+    @media (max-width: 700px) {
+        
+        .work {    
+            width: 200px;
+            height: 200px;
+        }
+        .showcase {
+            position: fixed;
+        }
+        &.showcase_shown {
+            .dim_bkg { 
+                position: fixed;
+                top: 0;
+                .close-buttom {
+                    font-size: 23px;
+                }
+            }
+        }
+        
+    }
 }

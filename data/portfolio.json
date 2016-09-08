@@ -1,0 +1,22 @@
+{
+    "works": [
+        {
+            "name": "FISTA'16",
+            "code": "fista16",
+            "png_desktop": "/dist/images/sites/fista16_desktop.png",
+            "png_mobile": "/dist/images/sites/fista16_mobile.png"
+        },
+        {
+            "name": "LabProjectos",
+            "code": "labprojectos",
+            "png_desktop": "/dist/images/sites/lab_desktop.png",
+            "png_mobile": "/dist/images/sites/lab_mobile.png"
+        },
+        {
+            "name": "Seguro de Saude de Ordem dos Médicos",
+            "code": "segurosaudeom",
+            "png_desktop": "/dist/images/sites/segurosaudeom_desktop.png",
+            "png_mobile": "/dist/images/sites/segurosaudeom_mobile.png"
+        }
+    ]
+}
