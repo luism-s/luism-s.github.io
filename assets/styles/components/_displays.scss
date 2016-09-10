@@ -1,25 +1,68 @@
-$phone-height: 640px;
-$desktop-height: 640px;
+$device-height: 300px;
+
+$phone-ratio: 0.666;
+$phone-height: $device-height;
+$phone-width: $phone-height * $phone-ratio;
+
+$desktop-ratio: 1.777;
+$desktop-height: $device-height;
+$desktop-width: $desktop-height * $desktop-ratio;
+
+$device-border-width: $device-height / 35;
+$device-border-bottom-width: $device-height / 7;
 
 
+$device-color: #ddd;
+
+.device {
+    display: inline-block;
+    margin: 0 15px;
+
+    .frame {
+        background-color: $device-color;
+        overflow-y: scroll;
+        width: 100%;
+        height: 100%;
+
+        
+        border: $device-border-width solid;
+        border-bottom: $device-border-bottom-width solid;
+        border-color: $device-color;
+        border-radius: 10px;
+
+        img {
+            width: 100%;
+        } 
+    }
+}
 .phone {
-    padding: 50px 7px;
-    width: $phone-height / 1.777; 
+
+    width: $phone-width; 
     height: $phone-height;
 }
-
 .desktop {
-    padding: 10px 10px 70px 10px;
-    width: $desktop-height / 1.777; 
+    width: $desktop-width; 
     height: $desktop-height;
 }
 
-.phone, .desktop {
-    overflow: hidden;
-    iframe {
-        border: 0;
+
+
+
+@media (max-width: 800px) {
+
+    .device .frame {
+        border-bottom: initial;
+        border: 5px solid;    
+        border-radius: 0;
+    }
+    .phone {
+        display: none;
+    }
+
+    .desktop {
+        height: 250px;
         width: 100%;
-        height: 100%;
-        background-color: black; 
+        position: relative;
+        left: -20px;
     }
 }

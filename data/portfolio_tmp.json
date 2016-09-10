@@ -1,0 +1,34 @@
+{
+    "works": [
+        {
+            "name": "FISTA'16",
+            "year": "2016",
+            "url": "http://fista.iscte-iul.pt/",
+            "simple_url": "fista.iscte-iul.pt",
+            "code": "fista16",
+            "png_desktop": "/dist/images/sites/fista16_desktop.png",
+            "png_mobile": "/dist/images/sites/fista16_mobile.png",
+            "role": "Design/Development"
+        },
+        {
+            "name": "LabProjectos",
+            "year": "2016",
+            "url": "http://labprojectos.com/",
+            "simple_url": "labprojectos.com",
+            "code": "labprojectos",
+            "png_desktop": "/dist/images/sites/lab_desktop.png",
+            "png_mobile": "/dist/images/sites/lab_mobile.png",
+            "role": "Development"
+        },
+        {
+            "name": "Seguro de Saúde da Ordem dos Médicos",
+            "year": "2016",
+            "url": "http://segurosaudeom.pt/",
+            "simple_url": "segurosaudeom.pt",
+            "code": "segurosaudeom",
+            "png_desktop": "/dist/images/sites/segurosaudeom_desktop.png",
+            "png_mobile": "/dist/images/sites/segurosaudeom_mobile.png",
+            "role": "Development"
+        }
+    ]
+}

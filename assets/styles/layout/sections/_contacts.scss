@@ -7,6 +7,12 @@ section.contacts {
     bottom: 0;
     left: 0;
     position: fixed;
+
+    .header {
+        h4 {
+            font-weight: normal;
+        }
+    }
     
     .content {
         position: absolute;
@@ -21,11 +27,11 @@ section.contacts {
         font-size: 25pt;
         margin: 0 15px;
         transition: all 0.3s linear;
+        color: black;
         &:before {
             vertical-align: sub;
         }
         &:hover {
-            color: black;
             margin: 0 30px;
         }
     }

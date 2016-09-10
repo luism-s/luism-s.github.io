@@ -16,9 +16,9 @@
   "dependencies": {
     "normalize-css": "^4.0.0",
     "susy": "^2.2.12",
-    "jquery": "^2.2.2"
+    "jquery": "^2.2.2",
+    "mustache.js": "mustache#^2.2.1"
   },
-  
   "overrides": {
     "jquery": {
       "main": [
@@ -28,6 +28,11 @@
     "normalize-css": {
       "main": [
         "./normalize.css"
+      ]
+    },
+    "mustache.js": {
+      "main": [
+        "./mustache.min.js"
       ]
     }
   }
