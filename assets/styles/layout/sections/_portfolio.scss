@@ -84,7 +84,7 @@ section.portfolio {
             
             .close-buttom {
                 display: block;
-                font-size: 18px;
+                font-size: 25px;
                 text-align: right;
                 margin-bottom: 5px;
                 cursor: pointer;
@@ -92,6 +92,13 @@ section.portfolio {
         }
 
         .details {
+            padding: 5px 0;
+            @media (min-width: 800px) {
+                margin-left: 15px;
+            }
+            p {
+                margin: 8px 0;
+            }
             &, a {
                 color: #f1f1f1;
             }
