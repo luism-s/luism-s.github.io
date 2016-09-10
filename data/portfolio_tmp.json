@@ -19,6 +19,16 @@
             "png_desktop": "/dist/images/sites/lab_desktop.png",
             "png_mobile": "/dist/images/sites/lab_mobile.png",
             "role": "Development"
+        },
+        {
+            "name": "Seguro de Saúde da Ordem dos Médicos",
+            "year": "2016",
+            "url": "http://segurosaudeom.pt/",
+            "simple_url": "segurosaudeom.pt",
+            "code": "segurosaudeom",
+            "png_desktop": "/dist/images/sites/segurosaudeom_desktop.png",
+            "png_mobile": "/dist/images/sites/segurosaudeom_mobile.png",
+            "role": "Development"
         }
     ]
 }

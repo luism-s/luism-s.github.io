@@ -28,7 +28,7 @@ $device-color: #ddd;
         border: $device-border-width solid;
         border-bottom: $device-border-bottom-width solid;
         border-color: $device-color;
-        border-radius: 20px;
+        border-radius: 10px;
 
         img {
             width: 100%;
@@ -48,18 +48,21 @@ $device-color: #ddd;
 
 
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
 
     .device .frame {
         border-bottom: initial;
-        border: 8px solid;
+        border: 5px solid;    
+        border-radius: 0;
     }
     .phone {
         display: none;
     }
 
     .desktop {
-        height: 200px;
-        width: 85%;
+        height: 250px;
+        width: 100%;
+        position: relative;
+        left: -20px;
     }
 }

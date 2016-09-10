@@ -25,9 +25,6 @@
     </section>
 
     <section class="portfolio">
-        <div class="dim_bkg">
-            <div class="close-buttom">X</div>
-        </div>
         <div class="container content">
             <div class="header">
                 <h4>Portfolio</h4>
@@ -61,30 +58,36 @@
     
     <script src="/dist/scripts/main.js"></script>
 
-            <script id="works-template" type="mustache/x-tmpl">
-                {{#works}}
-                    <div class="work"  work_name="{{code}}">
-                        <p>{{name}}</p>
+    <script id="works-template" type="mustache/x-tmpl">
+        {{#works}}
+            <div class="work"  work_name="{{code}}">
+                <p>{{name}}</p>
+                <img src="{{png_desktop}}" alt="{{code}}">
+                <div class="shadow"></div>
+            </div>
+
+            <div class="showcase" work_name="{{code}}">
+                <div class="close-buttom">◾</div>
+                <div class="device phone">
+                    <div class="frame">
+                        <img src="{{png_mobile}}" alt="{{code}}">
+                    </div>
+                </div>
+
+                <div class="device desktop">
+                    <div class="frame">
                         <img src="{{png_desktop}}" alt="{{code}}">
-                        <div class="shadow"></div>
                     </div>
-
-                    <div class="showcase" work_name="{{code}}">
-
-                        <div class="device phone">
-                            <div class="frame">
-                                <img src="{{png_mobile}}" alt="{{code}}">
-                            </div>
-                        </div>
-
-                        <div class="device desktop">
-                            <div class="frame">
-                                <img src="{{png_desktop}}" alt="{{code}}">
-                            </div>
-                        </div>
-                    </div>
-                {{/works}}
-            </script>
+                </div>
+                <div class="details">
+                    <p><b>Name: </b>{{name}}</p>
+                    <p><b>Year: </b>{{year}}</p>
+                    <p><b>Role: </b>{{role}}</p>
+                    <p><b>Site: </b><a href="{{url}}">{{simple_url}}</a></p>
+                </div>
+            </div>
+        {{/works}}
+    </script>
 </body>
 
 </html>
