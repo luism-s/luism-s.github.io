@@ -1,5 +1,5 @@
 section.portfolio {
-    background: $color-two;
+    background: $color-yellow;
     color: white;
     margin-bottom: 100vh;
     z-index: 2;
@@ -70,7 +70,7 @@ section.portfolio {
         max-width: 800px;;
         padding: 10px 20px 10px;
         text-align: left;
-        background-color: rgba(0, 0, 0, 0.35);
+        background-color: rgba(243,243,243,0.5);
 
         .close-buttom {
             display: none;
@@ -100,7 +100,7 @@ section.portfolio {
                 margin: 8px 0;
             }
             &, a {
-                color: #f1f1f1;
+                color: #1f1f1f;
             }
         }
     }
