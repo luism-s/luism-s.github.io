@@ -11,6 +11,16 @@
             "role": "Design/Development"
         },
         {
+            "name": "Largestinfo Web Portal",
+            "year": "2015",
+            "url": "",
+            "simple_url": "N/A",
+            "code": "largestinfo",
+            "png_desktop": "/dist/images/sites/largestinfo_desktop.png",
+            "png_mobile": "/dist/images/sites/largestinfo_mobile.png",
+            "role": "Design/Development"
+        },
+        {
             "name": "LabProjectos",
             "year": "2016",
             "url": "http://labprojectos.com/",
