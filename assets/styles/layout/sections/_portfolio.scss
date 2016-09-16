@@ -12,7 +12,7 @@ section.portfolio {
 
     .work {    
         width: 250px;
-        height: 250px;
+        height: 200px;
         overflow: hidden;
         position: relative;
         cursor: pointer;
@@ -24,7 +24,7 @@ section.portfolio {
             margin: auto;
             left: 0;
             right: 0;
-            top: 50%;
+            top: 46%;
             opacity: 0;
             transition: opacity .3s ease;
 
