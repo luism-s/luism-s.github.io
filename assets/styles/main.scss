@@ -2,15 +2,15 @@
 @import "../../bower_components/susy/sass/_susy.scss";
 // endbower
 
+@import 'config/animations';
+@import 'config/mixins';
+@import 'config/variables';
+
 @import 'base/geral';
 @import 'base/fonts';
 
 @import 'components/icons';
 @import 'components/displays';
-
-@import 'config/animations';
-@import 'config/mixins';
-@import 'config/variables';
 
 @import 'layout/footer';
 @import 'layout/section';
