@@ -71,7 +71,7 @@ section.portfolio {
         max-width: 800px;;
         padding: 10px 20px 10px;
         text-align: left;
-        background-color: rgba(243,243,243,0.7);
+        background-color: rgba(255, 255, 255, 0.5);
 
         .close-buttom {
             display: none;
@@ -102,7 +102,7 @@ section.portfolio {
                 margin: 8px 0;
             }
             &, a {
-                color: #1f1f1f;
+                color: rgba(0, 0, 0, 0.75);;
             }
         }
     }
