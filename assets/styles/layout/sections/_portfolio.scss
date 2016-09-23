@@ -72,7 +72,7 @@ section.portfolio {
         max-width: 800px;;
         padding: 10px 20px 10px;
         text-align: left;
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: white;
 
         .close-buttom {
             display: none;
@@ -85,12 +85,14 @@ section.portfolio {
 
             
             .close-buttom {
-                font-size: 25px;
                 margin-bottom: 5px;
+                font-size: 20px;
                 cursor: pointer;
                 display: inline-block;
                 position: relative;
-                left: 98%;
+                left: 98.5%;
+                color: black;
+                font-weight: bold;
             }
         }
 
@@ -133,7 +135,6 @@ section.portfolio {
         .showcase {
             position: fixed;
             width: 85%;
-            background-color: rgba(255, 255, 255, 0.6);
         }
         &.showcase_shown {
             .dim_bkg { 
