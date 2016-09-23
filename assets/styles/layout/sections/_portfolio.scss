@@ -1,10 +1,11 @@
 section.portfolio {
-    background: $color-orange;
+    background: $color-yellow;
     color: white;
     margin-bottom: 100vh;
     z-index: 2;
     
     .header {
+        color: black;
         h4 {
             font-weight: normal;
         }
