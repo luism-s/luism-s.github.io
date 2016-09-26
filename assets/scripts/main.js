@@ -1,6 +1,10 @@
 $(function() {
 
         $.getJSON('/data/portfolio.json', function(data) {
+                for (var i in data.works) {
+                        data.works[i].index = i;
+                }
+
                 var template = $('#works-template').html();
                 Mustache.parse(template);   // optional, speeds up future uses
                 var rendered = Mustache.render(template, data);
@@ -21,8 +25,8 @@ $(function() {
         });
         $(document).on("click", ".work", function() {
 
-                var work_name = $(this).attr('work_name');
-                $('.showcase' + '[work_name=' + work_name + ']').addClass('show');
+                var work_id = $(this).attr('work_id');
+                $('.showcase' + '[work_id=' + work_id + ']').addClass('show');
                 $('.portfolio').addClass('showcase_shown');
 
         });

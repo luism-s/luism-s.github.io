@@ -60,25 +60,25 @@
 
     <script id="works-template" type="mustache/x-tmpl">
         {{#works}}
-            <div class="work"  work_name="{{code}}">
+            <div class="work"  work_id="{{index}}">
                 <p>{{name}}</p>
-                <img src="{{png_desktop}}" alt="{{code}}">
+                <img src="{{png_desktop}}" alt="{{name}}">
                 <div class="shadow"></div>
             </div>
 
-            <div class="showcase" work_name="{{code}}">
+            <div class="showcase" work_id="{{index}}">
                 <div><div class="close-buttom">•</div></div>
                 <div>
                     <div class="devices-holder">
                         <div class="device phone">
                             <div class="frame">
-                                <img src="{{png_mobile}}" alt="{{code}}">
+                                <img src="{{png_mobile}}" alt="{{name}}">
                             </div>
                         </div>
 
                         <div class="device desktop">
                             <div class="frame">
-                                <img src="{{png_desktop}}" alt="{{code}}">
+                                <img src="{{png_desktop}}" alt="{{name}}">
                             </div>
                         </div>
                     </div>
