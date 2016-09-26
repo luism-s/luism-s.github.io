@@ -98,9 +98,6 @@ section.portfolio {
 
         .details {
             padding: 5px 0;
-            @media (min-width: 800px) {
-                margin-left: 15px;
-            }
             p {
                 margin: 8px 0;
             }
@@ -126,6 +123,16 @@ section.portfolio {
     }
 
     
+    @media (min-width: 800px) {
+        .showcase {
+            .devices-holder {
+                height: 350px;
+            }
+            .details {
+                margin-left: 15px;
+            }
+        }
+    }
     @media (max-width: 800px) {
         
         .work {    
@@ -136,6 +143,10 @@ section.portfolio {
             position: fixed;
             width: 85%;
             padding: 5px 20px 0px;
+
+            .devices-holder {
+                height: 230px;
+            }
         }
         &.showcase_shown {
             .dim_bkg { 
