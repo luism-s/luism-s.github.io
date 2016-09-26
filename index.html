@@ -67,27 +67,25 @@
             </div>
 
             <div class="showcase" work_id="{{index}}">
-                <div><div class="close-buttom">•</div></div>
-                <div>
-                    <div class="devices-holder">
-                        <div class="device phone">
-                            <div class="frame">
-                                <img src="{{png_mobile}}" alt="{{name}}">
-                            </div>
+                <div class="close-buttom">•</div>
+                <div class="devices-holder">
+                    <div class="device phone">
+                        <div class="frame">
+                            <img src="{{png_mobile}}" alt="{{name}}">
                         </div>
+                    </div>
 
-                        <div class="device desktop">
-                            <div class="frame">
-                                <img src="{{png_desktop}}" alt="{{name}}">
-                            </div>
+                    <div class="device desktop">
+                        <div class="frame">
+                            <img src="{{png_desktop}}" alt="{{name}}">
                         </div>
                     </div>
-                    <div class="details">
-                        <p><b>Name: </b>{{name}}</p>
-                        <p><b>Year: </b>{{year}}</p>
-                        <p><b>Role: </b>{{role}}</p>
-                        <p><b>Site: </b><a href="{{url}}">{{simple_url}}</a></p>
-                    </div>
+                </div>
+                <div class="details">
+                    <p><b>Name: </b>{{name}}</p>
+                    <p><b>Year: </b>{{year}}</p>
+                    <p><b>Role: </b>{{role}}</p>
+                    <p><b>Site: </b><a href="{{url}}">{{simple_url}}</a></p>
                 </div>
             </div>
         {{/works}}
