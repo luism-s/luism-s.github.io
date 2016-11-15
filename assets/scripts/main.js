@@ -23,10 +23,10 @@ $(function() {
                         hideWork();
                 }
         });
-        $(document).on("click", ".work", function() {
-
+        $(document).on("click", ".work-box", function() {
+                hideWork();
                 var work_id = $(this).attr('work_id');
-                $('.showcase' + '[work_id=' + work_id + ']').addClass('show');
+                $('.work-showcase' + '[work_id=' + work_id + ']').addClass('show');
                 $('.portfolio').addClass('showcase_shown');
 
         });
@@ -34,10 +34,18 @@ $(function() {
 });
 
 
-function hideWork() {
-    $('.showcase').removeClass('show');
-    $('.portfolio').removeClass('showcase_shown');
+function toggleWork(work_showcase) {
+        if(work_showcase.hasClass('show')) {
+                work_showcase.removeClass('show');
+                $('.portfolio').removeClass('showcase_shown');
+        }
+        else {
+                work_showcase.addClass('show');
+                $('.portfolio').removeClass('showcase_shown');
+        }
+
 }
-function ola() {
-   console.log("ola");
+function hideWork() {
+    $('.work-showcase').removeClass('show');
+    $('.portfolio').removeClass('showcase_shown');
 }

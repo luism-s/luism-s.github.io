@@ -6,7 +6,6 @@ section.contacts {
     width: 100%;
     bottom: 0;
     left: 0;
-    position: fixed;
 
     .header {
         h4 {
@@ -17,10 +16,13 @@ section.contacts {
     .content {
         position: absolute;
         top: 27%;
+        right: 0;
+        left: 0;
         .text {
             background: white;
             padding: 50px 0;
             position: absolute;  
+            text-align: center;
         }
     }
     a {
