@@ -1,8 +1,27 @@
 section.portfolio {
-    background: $color-yellow;
+    background: $color-orange;
     color: white;
     z-index: 2;
-    
+    margin-bottom: 100vh;
+    overflow-x: hidden;
+
+    .triangle {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 40px 50vw 0 50vw;
+        border-color: $color-blue transparent transparent transparent;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+    }
+    .content {
+        padding-top: 40px;
+        margin-bottom: 50px;
+    }
+
     .header {
         color: black;
         h4 {
@@ -12,8 +31,7 @@ section.portfolio {
     .works {
         text-align: initial;
     }
-    .work {
-        display: inline-block;
+    .work {        
         &-box {
             width: 250px;
             height: 200px;
@@ -64,19 +82,20 @@ section.portfolio {
         }
 
         &-showcase {
+            
             opacity: 0;
             position: absolute;
             top: 0;
-            width: 100%;
             left: -100%;
             right: 100%;
             top: 10%;
             z-index: 2;
             transition: all .5s ease-out;
-            max-width: 800px;;
-            padding: 10px 20px 10px;
+            max-width: 800px;
+            padding: 10px 0;
             text-align: left;
             background-color: white;
+            margin: 0 auto;
             .close-buttom {
                 display: none;
             }
@@ -84,24 +103,25 @@ section.portfolio {
                 opacity: 1;
                 left: 0;
                 right: 0;
-                margin: auto;
 
                 
                 .close-buttom {
-                    margin-bottom: 5px;
+                    margin-bottom: 10px;
+                    margin-right: 10px;
                     font-size: 20px;
                     cursor: pointer;
-                    display: inline-block;
+                    display: block;
                     position: relative;
-                    left: 98.5%;
                     color: black;
                     font-weight: bold;
+                    text-align: right;
+                    padding-right: 10px;
                 }
             }
 
             .details {
                 
-                padding: 5px 0;
+                padding: 5px 10px;
                 p {
                     margin: 8px 0;
                 }
@@ -130,28 +150,34 @@ section.portfolio {
 
     
     @media (min-width: 800px) {
-        .showcase {
+        .work { 
+            display: inline-block;
+            margin: 15px 5px;
+        }
+        .work-showcase {
             .devices-holder {
-                height: 350px;
+                //height: 350px;
             }
             .details {
-                margin-left: 15px;
+                margin-left: 7px;
             }
         }
     }
     @media (max-width: 800px) {
         
-        .work {    
-            width: 200px;
-            height: 200px;
+        .works {
+            text-align: center;
+            .work {    
+                margin: 5px 0;
+                &-box {
+                    height: 150px;
+                }
+            }
         }
-        .showcase {
-            position: fixed;
-            width: 85%;
-            padding: 5px 20px 0px;
-
+        .work-showcase {
+                width: 95%;
             .devices-holder {
-                height: 230px;
+                //height: 230px;
             }
         }
         &.showcase_shown {
