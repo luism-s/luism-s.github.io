@@ -2,7 +2,6 @@ var autoPrefixBrowserList = ['last 2 version', 'safari 5', 'ie 8', 'ie 9', 'oper
 
 var gulp            = require('gulp'),
     sass            = require('gulp-sass'),
-    less            = require('gulp-less'),
     browserSync     = require('browser-sync'),
     autoprefixer    = require('gulp-autoprefixer'),
     uglify          = require('gulp-uglify'),
@@ -60,7 +59,6 @@ gulp.task('styles', function() {
     merged.add(
         gulp.src(dep.globs, {base: 'styles'})
             .pipe(sourceMaps.init())
-            .pipe(gulpif('*.less', less()))
             .pipe(gulpif('*.scss', 
                 sass({
                     errLogToConsole: true,
