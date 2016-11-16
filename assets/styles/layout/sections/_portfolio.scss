@@ -1,5 +1,5 @@
 section.portfolio {
-    background: $color-orange;
+    background: $color-two;
     color: white;
     z-index: 2;
     margin-bottom: 100vh;
@@ -10,7 +10,7 @@ section.portfolio {
         height: 0;
         border-style: solid;
         border-width: 40px 50vw 0 50vw;
-        border-color: $color-blue transparent transparent transparent;
+        border-color: $color-one transparent transparent transparent;
         position: absolute;
         top: 0;
         right: 0;
@@ -96,8 +96,22 @@ section.portfolio {
             text-align: left;
             background-color: white;
             margin: 0 auto;
-            .close-buttom {
-                display: none;
+
+            &-header {
+                position: relative;
+                height: 25px;
+                .close-buttom {
+                    cursor: pointer;
+                    position: absolute;
+                    right: 10px;
+                    &:after {
+                        content: '•';
+                        color: #333;
+                        font-size: 22px;
+                        font-weight: bold;
+                        line-height: 18px;
+                    }
+                }
             }
             &.show {
                 opacity: 1;
@@ -106,16 +120,6 @@ section.portfolio {
 
                 
                 .close-buttom {
-                    margin-bottom: 10px;
-                    margin-right: 10px;
-                    font-size: 20px;
-                    cursor: pointer;
-                    display: block;
-                    position: relative;
-                    color: black;
-                    font-weight: bold;
-                    text-align: right;
-                    padding-right: 10px;
                 }
             }
 
@@ -175,10 +179,8 @@ section.portfolio {
             }
         }
         .work-showcase {
-                width: 95%;
-            .devices-holder {
-                //height: 230px;
-            }
+            width: 95%;
+            position: fixed;
         }
         &.showcase_shown {
             .dim_bkg { 
