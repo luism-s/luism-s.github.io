@@ -6,128 +6,110 @@ var gulp            = require('gulp'),
     autoprefixer    = require('gulp-autoprefixer'),
     uglify          = require('gulp-uglify'),
     cssnano         = require('gulp-cssnano'),
-    gutil           = require('gulp-util'),
     concat          = require('gulp-concat'),
     sourceMaps      = require('gulp-sourcemaps'),
     imagemin        = require('gulp-imagemin'),
     gulpSequence    = require('gulp-sequence').use(gulp),
     plumber         = require('gulp-plumber'),
     clean           = require('gulp-clean'),
-    changed         = require('gulp-changed'),
-    flatten         = require('gulp-flatten'),
     merge           = require('merge-stream'),
-    gulpif          = require('gulp-if'),
-    manifest        = require('asset-builder')('./assets/manifest.json'),
-    dotenv          = require('dotenv').config();
+    dotenv          = require('dotenv').config(),	 
+    notify          = require("gulp-notify"),
+    gulpif          = require('gulp-if');
+    argv            = require('minimist')(process.argv.slice(2)),
+    forEach         = require('gulp-foreach');
+    
+var prod    = argv.production,
+    debug   = argv.debug;
 
-var path = manifest.paths,
-    globs = manifest.globs,
-    project = manifest.getProjectGlobs();
-
+var config  = require('./assets/config.json'),
+    css     = config.dependencies.css,
+    js      = config.dependencies.js,
+    paths   = config.paths;
 
 gulp.task('images', function () {
-    gulp.src(path.source + 'images/**/*')
-        .pipe(plumber())
-        .pipe(gulp.dest(path.dist + 'images'))
+    gulp.src(paths.source + 'images/**/*')
+        .pipe(gulpif(prod, imagemin({
+            optimizationLevel: 5,
+            progressive: true,
+            interlaced: true
+        })))
+        .pipe(gulp.dest(paths.dist + 'images'))
         .pipe(browserSync.stream());
 });
 
 gulp.task('fonts', function () {
-    return gulp.src(path.source + 'fonts/**/*')
-        .pipe(plumber())
-        .pipe(gulp.dest(path.dist + 'fonts'))
+    return gulp.src(paths.source + 'fonts/**/*')
+        .pipe(gulp.dest(paths.dist + 'fonts'))
         .pipe(browserSync.stream());
 });
 
 gulp.task('scripts', function() {
     var merged = merge();
-    manifest.forEachDependency('js', function(dep) {
-    merged.add(
-      gulp.src(dep.globs, {base: 'scripts'})
-        .pipe(concat(dep.name))
-        .on('error', gutil.log)
-    );
-    });
+    js.files.forEach(function(dep) {
+        merged.add(
+            gulp.src(paths.source + dep)
+                .pipe(plumber({
+                    errorHandler: notify.onError('Error: <%= error.message %>')
+                }))
+        )
+    })
+
     return merged
-                .pipe(gulp.dest(path.dist + 'scripts' ))
+                .pipe(concat(js.name))
+                .pipe(gulpif(prod, uglify()))
+                .pipe(gulp.dest(paths.dist + 'scripts' ))
                 .pipe(browserSync.stream());
 });
 
 gulp.task('styles', function() {
-  var merged = merge();
-  manifest.forEachDependency('css', function(dep) {
-    merged.add(
-        gulp.src(dep.globs, {base: 'styles'})
-            .pipe(sourceMaps.init())
-            .pipe(gulpif('*.scss', 
-                sass({
+    var merged = merge();
+
+    css.files.forEach(function(dep) {
+        merged.add(
+            gulp.src(paths.source + dep)
+                .pipe(plumber({
+                    errorHandler: notify.onError('Error: <%= error.message %>')
+                }))
+                .pipe(gulpif(!prod, sourceMaps.init()))
+                .pipe(gulpif('*.scss', sass({
                     errLogToConsole: true,
                     includePaths: ['.']
-                })
-            ))
-            .pipe(autoprefixer({
-                browsers: autoPrefixBrowserList,
-                cascade:  true
-            }))
-            .on('error', gutil.log)
-            .pipe(sourceMaps.write())
-            .pipe(concat(dep.name))
-    
-    );
-  });
-  return merged
-            .pipe(gulp.dest(path.dist + 'styles' ))
+                })))
+                .pipe(autoprefixer({
+                    browsers: autoPrefixBrowserList,
+                    cascade:  true
+                }))
+                .pipe(gulpif(!prod, sourceMaps.write()))
+                .pipe(gulpif(prod, cssnano()))
+        )
+    })
+
+    return merged
+            .pipe(concat(css.name))
+            .pipe(gulp.dest(paths.dist + 'styles' ))
             .pipe(browserSync.stream());
 });
 
-gulp.task('wiredep', function() {
-  var wiredep = require('wiredep').stream;
-  return gulp.src(project.css)
-    .pipe(wiredep())
-    .pipe(changed(path.source + 'styles', {
-      hasChanged: changed.compareSha1Digest
-    }))
-    .pipe(gulp.dest(path.source + 'styles'));
+gulp.task('default', function(callback){
+    gulpSequence('clean', 'images', 'fonts', 'scripts', 'styles')(callback)
 });
 
-gulp.task('default', gulpSequence('clean', 'images', 'fonts', 'scripts', 'wiredep', 'styles') );
-
 gulp.task('clean', function () {
-	return gulp.src(path.dist, {read: false} )
+	return gulp.src(paths.dist, {read: false} )
 		.pipe(clean());
 });
 
 gulp.task('watch', ['default'], function() {
     browserSync.init({
-        files: ['**/*.html'],
-        proxy: process.env.DEV_URL,
+        files: config.watch,
+        proxy: config.devUrl,
         notify: false
     });
 
-    gulp.watch(path.source + 'images/**/*', ['images']);
-    gulp.watch(path.source + 'fonts/**/*', ['fonts']);
-    gulp.watch(path.source + 'scripts/**/*', ['scripts']);
-    gulp.watch(path.source + 'styles/**/*', ['styles']);
-});
-
-gulp.task('build', ['default'], function() {
-
-    gulp.src(path.dist + 'images/**/*' )
-        .pipe(plumber())
-        .pipe(imagemin({
-            optimizationLevel: 5,
-            progressive: true,
-            interlaced: true
-        }))
-        .pipe(gulp.dest(path.dist + 'images' ));
-
-    gulp.src(path.dist + 'scripts/**/*.js' )
-        .pipe(plumber())
-        .pipe(uglify())
-        .pipe(gulp.dest( path.dist + 'scripts' ));
-
-    gulp.src(path.dist + 'styles/**/*.css' )
-        .pipe(plumber())
-        .pipe(cssnano())
-        .pipe(gulp.dest(path.dist + 'styles' ));
+    gulp.watch(paths.source + 'config.json', ['default']);
+    gulp.watch(paths.source + 'images/**/*', ['images']);
+    gulp.watch(paths.source + 'fonts/**/*', ['fonts']);
+    gulp.watch(paths.source + 'scripts/**/*', ['scripts']);
+    gulp.watch(paths.source + 'styles/**/*', ['styles']);
 });
