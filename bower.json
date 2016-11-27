@@ -15,7 +15,6 @@
   "private": true,
   "dependencies": {
     "normalize-css": "^4.0.0",
-    "susy": "^2.2.12",
     "jquery": "^2.2.2",
     "mustache.js": "mustache#^2.2.1"
   },
