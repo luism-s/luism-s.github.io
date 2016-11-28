@@ -12,20 +12,28 @@ var gulp            = require('gulp'),
     gulpSequence    = require('gulp-sequence').use(gulp),
     plumber         = require('gulp-plumber'),
     clean           = require('gulp-clean'),
-    merge           = require('merge-stream'),
     dotenv          = require('dotenv').config(),	 
     notify          = require("gulp-notify"),
     gulpif          = require('gulp-if');
     argv            = require('minimist')(process.argv.slice(2)),
-    forEach         = require('gulp-foreach');
-    
+    filelog         = require('gulp-filelog'),
+    jshint          = require('gulp-jshint');
+
 var prod    = argv.production,
-    debug   = argv.debug;
+    lintjs  = argv.lintjs;
 
 var config  = require('./assets/config.json'),
     css     = config.dependencies.css,
     js      = config.dependencies.js,
     paths   = config.paths;
+
+var sources = function(list){
+    var sources = [];
+    list.forEach(function(dep) {
+        sources.push(paths.source + dep);
+    });
+    return sources;
+};
 
 gulp.task('images', function () {
     gulp.src(paths.source + 'images/**/*')
@@ -45,50 +53,39 @@ gulp.task('fonts', function () {
 });
 
 gulp.task('scripts', function() {
-    var merged = merge();
-    js.files.forEach(function(dep) {
-        merged.add(
-            gulp.src(paths.source + dep)
-                .pipe(plumber({
-                    errorHandler: notify.onError('Error: <%= error.message %>')
-                }))
-        )
-    })
 
-    return merged
-                .pipe(concat(js.name))
-                .pipe(gulpif(prod, uglify()))
-                .pipe(gulp.dest(paths.dist + 'scripts' ))
-                .pipe(browserSync.stream());
+    return gulp.src(sources(js.files))
+        .pipe(gulpif(lintjs, jshint()))
+        .pipe(gulpif(lintjs, jshint.reporter('default')))
+        .pipe(plumber({
+            errorHandler: notify.onError('Error: <%= error.message %>')
+        }))
+        .pipe(concat(js.name))
+        .pipe(gulpif(prod, uglify()))
+        .pipe(gulp.dest(paths.dist + 'scripts' ))
+        .pipe(browserSync.stream());
 });
 
 gulp.task('styles', function() {
-    var merged = merge();
 
-    css.files.forEach(function(dep) {
-        merged.add(
-            gulp.src(paths.source + dep)
-                .pipe(plumber({
-                    errorHandler: notify.onError('Error: <%= error.message %>')
-                }))
-                .pipe(gulpif(!prod, sourceMaps.init()))
-                .pipe(gulpif('*.scss', sass({
-                    errLogToConsole: true,
-                    includePaths: ['.']
-                })))
-                .pipe(autoprefixer({
-                    browsers: autoPrefixBrowserList,
-                    cascade:  true
-                }))
-                .pipe(gulpif(!prod, sourceMaps.write()))
-                .pipe(gulpif(prod, cssnano()))
-        )
-    })
-
-    return merged
-            .pipe(concat(css.name))
-            .pipe(gulp.dest(paths.dist + 'styles' ))
-            .pipe(browserSync.stream());
+    return gulp.src(sources(css.files))
+        .pipe(plumber({
+            errorHandler: notify.onError('Error: <%= error.message %>')
+        }))
+        .pipe(gulpif(!prod, sourceMaps.init()))
+        .pipe(gulpif('*.scss', sass({
+            errLogToConsole: true,
+            includePaths: ['.']
+        })))
+        .pipe(autoprefixer({
+            browsers: autoPrefixBrowserList,
+            cascade:  true
+        }))
+        .pipe(gulpif(!prod, sourceMaps.write()))
+        .pipe(gulpif(prod, cssnano()))
+        .pipe(concat(css.name))
+        .pipe(gulp.dest(paths.dist + 'styles' ))
+        .pipe(browserSync.stream());
 });
 
 gulp.task('default', function(callback){
@@ -97,7 +94,7 @@ gulp.task('default', function(callback){
 
 gulp.task('clean', function () {
 	return gulp.src(paths.dist, {read: false} )
-		.pipe(clean());
+        .pipe(clean());
 });
 
 gulp.task('watch', ['default'], function() {

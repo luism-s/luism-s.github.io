@@ -3,8 +3,8 @@
         "js": {
             "files": [
                 "../node_modules/jquery/dist/jquery.min.js",
-                "../node_modules/mustache/dist/mustache.min.js",
-                "scripts/main.js"                
+                "../node_modules/mustache/mustache.js",
+                "scripts/main.js"
             ],
             "name": "main.js"
         },
