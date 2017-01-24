@@ -8,16 +8,15 @@ $desktop-ratio: 1.777;
 $desktop-height: $device-height;
 $desktop-width: $desktop-height * $desktop-ratio;
 
-$device-border-width: 7px;
-$device-border-bottom-width: 7px;
+$device-border-width: 5px;
 
-$device-color: #3e3e3e;
+$device-color: #f1f1f1;
 
 .device {
     display: inline-block;
     margin: 0 12px;
 
-    .frame {
+    &__frame {
         background-color: $device-color;
         overflow-y: scroll;
         width: 100%;
@@ -25,40 +24,36 @@ $device-color: #3e3e3e;
 
         
         border: $device-border-width solid;
-        border-bottom: $device-border-bottom-width solid;
         border-color: $device-color;
-        border-radius: 2px;
 
         img {
             width: 100%;
         } 
     }
+    
+    &--phone {
+        width: $phone-width; 
+        height: $phone-height;
+    }
+    &--desktop {
+        width: $desktop-width; 
+        height: $desktop-height;
+    }
 }
-.phone {
-    width: $phone-width; 
-    height: $phone-height;
-}
-.desktop {
-    width: $desktop-width; 
-    height: $desktop-height;
-}
-
-
-
 
 @media (max-width: 800px) {
 
-    .device .frame {
+    .device__frame {
         border-bottom: initial;
         border: 5px solid $color-four;    
         border-radius: 0;
         border-color: $color-four;
     }
-    .phone {
+    .device--phone {
         display: none;
     }
 
-    .desktop {
+    .device--desktop {
         height: 200px;
         width: calc(100% - 30px);
         position: relative;

@@ -1,19 +1,19 @@
 @mixin clearfix {
-    zoom:1;
-    &:before, &:after {
-        content: "\0020";
-        display: block;
-        height: 0;
-        overflow: hidden;
-    }
-    &:after {
-        clear: both;
-    }
+  zoom:1;
+  &:before, &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  &:after {
+    clear: both;
+  }
 }
 
 @mixin fadeIn ($durantion: 1s, $delay: 0s) {
-    animation: fadeIn ease-in-out 1;
-    animation-fill-mode: forwards;
-    animation-duration: $durantion;
-    animation-delay: $delay;
+  animation: fadeIn ease-in-out 1;
+  animation-fill-mode: forwards;
+  animation-duration: $durantion;
+  animation-delay: $delay;
 }

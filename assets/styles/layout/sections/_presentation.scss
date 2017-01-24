@@ -1,29 +1,22 @@
 section.presentation {
-    background: $color-one;
-    color: white;
-    z-index: 2;
-    .content {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 0;
-        left: 0;
-        
-        .header {      
-            font-family: 'Roboto', sans-serif;
-            font-weight: 100;
-            font-size: 22pt;
-            .name, .profession {
-                opacity: 0;
-            }
-            .name {
-                @include fadeIn(0.5s);
-            }
-            .profession {
-                @include fadeIn(0.75s, 0.5s);
-            }
-        }
+  background: $color-one;
+  color: white;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+
+  .header {      
+    font-family: 'Roboto', sans-serif;
+    &__title {
+      opacity: 0;
     }
-    
+    &__title {
+        @include fadeIn(0.5s);
+        &--sub {
+          @include fadeIn(0.75s, 0.5s);
+        }
+    }
+  }
 }

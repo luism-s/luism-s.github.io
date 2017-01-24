@@ -1,27 +1,27 @@
 {
-    "dependencies": {
-        "js": {
-            "files": [
-                "../node_modules/jquery/dist/jquery.min.js",
-                "../node_modules/mustache/mustache.js",
-                "scripts/main.js"
-            ],
-            "name": "main.js"
-        },
-        "css": {
-            "files": [
-                "../node_modules/normalize-css/normalize.css",
-                "styles/main.scss"
-            ],
-            "name": "main.css"
-        }
+  "dependencies": {
+    "js": {
+      "files": [
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/mustache/mustache.js",
+        "scripts/main.js"
+      ],
+      "name": "main.js"
     },
-    "devUrl": "http://luism-s.github.dev",
-    "paths": {
-        "source": "assets/",
-        "dist": "dist/"
-    },
-    "watch": [
-        "*.html"
-    ]
+    "css": {
+      "files": [
+        "../node_modules/normalize-css/normalize.css",
+        "styles/main.scss"
+      ],
+      "name": "main.css"
+    }
+  },
+  "devUrl": "http://luism-s.github.dev",
+  "paths": {
+    "source": "assets/",
+    "dist": "dist/"
+  },
+  "watch": [
+    "*.html"
+  ]
 }

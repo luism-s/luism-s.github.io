@@ -1,111 +1,118 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>luism-s.github.io</title>
-    <meta name="description" content="">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/dist/styles/main.css">
+  <meta charset="utf-8">
+  <title>luism-s.github.io</title>
+  <meta name="description" content="Luís is a Web Developer based in Lisbon with one year experience in the field.">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/dist/styles/main.css">
 
 </head>
 
 <body>
-    <section class="presentation">
-        <div class="content">
-            <header class="header">
-                <p class="name">Luís Silva</p>
-                <p class="profession">Web Developer</P>
-            </header>    
+  <section class="presentation">
+      <header class="header">
+        <h1 class="header__title">Luís Silva</h1>
+        <h1 class="header__title header__title--sub">Web Developer</h1>
+      </header>
+  </section>
+
+  <main>
+    <section class="portfolio">
+        <header class="header">
+          <h1 class="header__title">Portfolio</h1>
+        </header>
+        <div class="container works" id="works"></div>
+    </section>
+
+    <section class="contacts">
+      <header class="header">
+        <h1 class="header__title">Contacts</h1>
+      </header>
+      <ul class="contacts__list">
+        <li class="contact">
+            <span class="contact__icon"><img src="/dist/images/contacts/email.svg" alt="Email"></span>
+            <span class="contact__link">
+              <a href="mailto:luis.m.silva@mail.com">luis.m.silva@mail.com</a>
+            </span>
+        </li>
+        <li class="contact">
+            <span class="contact__icon"><img src="/dist/images/contacts/github-logo.svg" alt="Email"></span>
+            <span class="contact__link contact__link--short">
+              <a target="_blank" href="https://github.com/luism-s">github.com/luism-s</a>
+            </span>
+        </li>
+        <li class="contact">
+            <span class="contact__icon"><img src="/dist/images/contacts/linkedin-logo.svg" alt="Email"></span>
+            <span class="contact__link contact__link--large">
+              <a target="_blank" href="https://www.linkedin.com/in/luis-m-silva">linkedin.com/in/luis-m-silva</a>
+            </span>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+
+  <footer class="site-footer">
+
+    <p>Copyright &copy 2017 Luís Silva</p>
+
+  </footer>
+
+  <script src="/dist/scripts/main.js"></script>
+
+  <script id="works-template" type="mustache/x-tmpl">
+    {{#works}}
+      <article class="work">
+        <div class="js-work-preview work__preview" work_id="{{index}}">
+          <h5 class="work__preview-title">{{name}}</h5>
+          <img class="work__preview-img" src="{{png_desktop}}" alt="{{name}}">
+          <div class="shadow"></div>
         </div>
 
-    </section>
-    <main>
-        <section class="portfolio">
-            <span class="triangle"></span>
-            <div class="content">
-                <header class="header">
-                    <h4>Portfolio</h4>
-                </header>    
-
-
-                <div class="container works" id="works"></div>
+        <div class="js-work-showcase work__showcase" work_id="{{index}}">
+          <div class="work__showcase-header">   
+            <span class="close-buttom"></span>
+          </div>
+          <div class="devices-holder">
+            <div class="device device--phone">
+              <div class="device__frame">
+                  <img src="{{png_mobile}}" alt="{{name}}">
+              </div>
             </div>
-        </section>
-        
-        <section class="contacts">
-            <div class="content">
-                <header class="header">
-                    <h4>Contacts</h4>
-                </header>
-                <div class="text">
-                    <a class="icon icon-mail" href="mailto:luis.m.silva@mail.com"></a>
-                    <a class="icon icon-github" target="_blank" href="https://github.com/luism-s"></a>
-                    <a class="icon icon-linkedin" target="_blank" href="https://pt.linkedin.com/in/luís-silva-462b42a0"></a>
-                </div>    
+
+            <div class="device device--desktop">
+              <div class="device__frame">
+                  <img src="{{png_desktop}}" alt="{{name}}">
+              </div>
             </div>
-        </section>
-    </main>
+          </div>
+          <div class="work__details">
+            <p><b>Name: </b>{{name}}</p>
+            <p><b>Year: </b>{{year}}</p>
+            <p><b>Role: </b>{{role}}</p>
+            <p><b>Site: </b><a href="{{url}}">{{simple_url}}</a></p>
+          </div>
+        </div>
+      </article>
+    {{/works}}
+  </script>
 
-
-    <footer>
-        
-        <p>Copyright &copy 2016 Luís Silva</p>
-        
-    </footer>
-    
-    <script src="/dist/scripts/main.js"></script>
-
-    <script id="works-template" type="mustache/x-tmpl">
-        {{#works}}
-            <article class="work">
-                <div class="work-box" work_id="{{index}}">
-                    <p>{{name}}</p>
-                    <img src="{{png_desktop}}" alt="{{name}}">
-                    <div class="shadow"></div>
-                </div>
-
-                <div class="work-showcase" work_id="{{index}}">
-                    <div class="work-showcase-header">   
-                        <span class="close-buttom"></span>
-                    </div>
-                    <div class="devices-holder">
-                        <div class="device phone">
-                            <div class="frame">
-                                <img src="{{png_mobile}}" alt="{{name}}">
-                            </div>
-                        </div>
-
-                        <div class="device desktop">
-                            <div class="frame">
-                                <img src="{{png_desktop}}" alt="{{name}}">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="details">
-                        <p><b>Name: </b>{{name}}</p>
-                        <p><b>Year: </b>{{year}}</p>
-                        <p><b>Role: </b>{{role}}</p>
-                        <p><b>Site: </b><a href="{{url}}">{{simple_url}}</a></p>
-                    </div>
-                </div>
-            </article>
-        {{/works}}
-    </script>
-
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-71600725-2', 'auto');
-        ga('send', 'pageview');
-    </script>
+  <script>
+    (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-71600725-2', 'auto');
+    ga('send', 'pageview');
+  </script>
 </body>
 
 </html>
