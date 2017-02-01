@@ -17,3 +17,14 @@
   animation-duration: $durantion;
   animation-delay: $delay;
 }
+
+@mixin min-md {
+  @media (min-width: 800px) {
+    @content;
+  }
+}
+@mixin max-md {
+  @media (max-width: 800px) {
+    @content;
+  }
+}

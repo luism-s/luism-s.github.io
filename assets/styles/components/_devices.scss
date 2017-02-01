@@ -1,0 +1,60 @@
+$device-height: 250px;
+
+$phone-ratio: 0.666;
+$phone-height: $device-height;
+$phone-width: $phone-height * $phone-ratio;
+
+$desktop-ratio: 1.777;
+$desktop-height: $device-height;
+$desktop-width: $desktop-height * $desktop-ratio;
+
+$device-border-width: 2px;
+
+$device-color: #f1f1f1;
+
+.device {
+  display: inline-block;
+
+  &__frame {
+    background-color: $device-color;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+
+    
+    border: $device-border-width solid;
+    border-right: 0;
+    border-color: $device-color;
+
+    img {
+      width: 100%;
+    } 
+  }
+    
+  &--phone {
+    width: $phone-width; 
+    height: $phone-height;
+  }
+  &--desktop {
+    width: $desktop-width; 
+    height: $desktop-height;
+  }
+}
+
+@include max-md {
+
+  .device__frame {
+    border-bottom: initial;
+    border: 5px solid $color-four;
+    border-radius: 0;
+    border-color: $color-four;
+  }
+  .device--phone {
+    display: none;
+  }
+
+  .device--desktop {
+    height: 175px;
+    width: calc(100% - 10px);
+  }
+}

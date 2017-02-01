@@ -10,32 +10,67 @@ function renderWorks() {
         Mustache.parse(template);
         rendered = Mustache.render(template, data);
         $('#works').html(rendered);
+        $('[work_id=0] .button__navigation--left').addClass('button__navigation--inactive');
+        $('[work_id=' + (data.works.length - 1) + '] .button__navigation--right').addClass('button__navigation--inactive');
     }
   });
 }
 
-function hideWork() {
+function hideWork(work_id) {
   'use strict';
-  $('.js-work-showcase').removeClass('shown');
+  if(work_id >= 0) {
+    $('[work_id=' + work_id + '] .js-work-showcase').removeClass('work__showcase--shown');
+  } else {
+    $('.js-work-showcase').removeClass('work__showcase--shown');
+  }
 }
 
+function showWork(work_id) {
+  var showcase = '[work_id=' + work_id + '] .js-work-showcase';
+  if( work_id >= 0 && !$(showcase).hasClass("work__showcase--shown") ) {
+    $(showcase).addClass('work__showcase--shown');
+  }
+}
+
+function switchWork(shown_work_id, next_work_id) {
+  if(shown_work_id !== next_work_id) {
+    hideWork(shown_work_id);
+    showWork(next_work_id);
+  }
+}
 
 $(function () {
   'use strict';
   renderWorks();
 
-  $(document).on("click", ".close-buttom", function () {
+  $(document).on("click", ".js-close-work", function () {
     hideWork();
   });
+
   $(document).click(function (e) {
-    if (    $(e.target).is(".work") === false && 
-            $(e.target).is(".work *") === false ) {
+    if ( $(e.target).is(".work *") === false ) {
       hideWork();
     }
   });
+  
   $(document).on("click", ".js-work-preview", function () {
+    var work_id = $(this).parent().attr('work_id');
     hideWork();
-    var work_id = $(this).attr('work_id');
-    $('.js-work-showcase' + '[work_id=' + work_id + ']').addClass('shown');
+    showWork(work_id);
+    console
+  });
+
+
+  $(document).on("click", ".js-switch-work", function () {
+    var shown_work_id = Number($('.work__showcase--shown').parent().attr('work_id'));
+    var next_work_id = shown_work_id;
+    var number_of_works = $('.work').length;
+
+    if( $(this).hasClass("js-switch-work--previous") && shown_work_id > 0 ) {
+      next_work_id--;
+    } else if( $(this).hasClass("js-switch-work--next") && shown_work_id < number_of_works-1) {
+      next_work_id++;
+    }
+    switchWork(shown_work_id, next_work_id);
   });
 });

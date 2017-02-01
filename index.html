@@ -8,8 +8,7 @@
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:100|Lato:300' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/dist/styles/main.css">
 
 </head>
@@ -68,35 +67,36 @@
 
   <script id="works-template" type="mustache/x-tmpl">
     {{#works}}
-      <article class="work">
-        <div class="js-work-preview work__preview" work_id="{{index}}">
+      <article class="js-work work" work_id="{{index}}">
+        <div class="js-work-preview work__preview">
           <h5 class="work__preview-title">{{name}}</h5>
           <img class="work__preview-img" src="{{png_desktop}}" alt="{{name}}">
           <div class="shadow"></div>
         </div>
 
-        <div class="js-work-showcase work__showcase" work_id="{{index}}">
-          <div class="work__showcase-header">   
-            <span class="close-buttom"></span>
+        <div class="js-work-showcase work__showcase">
+          <div class="work__showcase-header">
+            <span class="navigation">
+              <span class="js-switch-work js-switch-work--previous button button__navigation button__navigation--left"></span>
+              <span class="js-switch-work js-switch-work--next button button__navigation button__navigation--right"></span>
+            </span>
+            <span class="js-close-work button button__close"></span>
           </div>
-          <div class="devices-holder">
-            <div class="device device--phone">
-              <div class="device__frame">
-                  <img src="{{png_mobile}}" alt="{{name}}">
-              </div>
-            </div>
+          <div class="work__showcase-body">
 
             <div class="device device--desktop">
               <div class="device__frame">
                   <img src="{{png_desktop}}" alt="{{name}}">
               </div>
             </div>
-          </div>
-          <div class="work__details">
-            <p><b>Name: </b>{{name}}</p>
-            <p><b>Year: </b>{{year}}</p>
-            <p><b>Role: </b>{{role}}</p>
-            <p><b>Site: </b><a href="{{url}}">{{simple_url}}</a></p>
+
+            <div class="work__details">
+              <p><b>Name: </b>{{name}}</p>
+              <p><b>Year: </b>{{year}}</p>
+              <p><b>Role: </b>{{role}}</p>
+              <p><b>Site: </b><a href="{{url}}">{{simple_url}}</a></p>
+            </div>
+
           </div>
         </div>
       </article>
