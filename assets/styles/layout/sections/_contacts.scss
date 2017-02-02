@@ -1,33 +1,45 @@
 .contacts {
   background: $color-four;
-  color: $color-one;
+  color: black;
   z-index: 1;
   height: 100vh;
   width: 100%;
   bottom: 0;
   left: 0;
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  @include min-md {
+    flex-direction: row;
+  }
   
-
+  .header {
+    flex: 1;
+    @include min-md {
+      flex: 2;
+    }
+    margin: 0;
+  }
   &__list {
     background: white;
-    padding: 55px 0;
-    text-align: center;
-    width: 100%;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
     
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -75%);
+    flex: 3;
+    @include min-md {
+      flex: 1;
+    }
+    flex-direction: column;
+    margin: 0;
   }
 
 }
 
 .contact {
-  margin: 0 2px;
+  margin: 5px 2px;
   padding: 15px 8px;
 
   &:hover {
@@ -55,8 +67,7 @@
     margin: 0 5px;
   }
   &__link {
-    opacity: 0;  
-    text-align: left;
+    opacity: 0;
     display: inline-block;
     width: 0;
     height: 0;
