@@ -57,7 +57,6 @@ $(function () {
     var work_id = $(this).parent().attr('work_id');
     hideWork();
     showWork(work_id);
-    console
   });
 
 
