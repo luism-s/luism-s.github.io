@@ -20,8 +20,7 @@
 
     &::after, &::before {
       content: '';
-      width: 1px;
-      height: 1em;
+      @include square(1px, 1em);
       background: #333;
       font-weight: bold;
       display: inline-block;

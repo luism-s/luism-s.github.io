@@ -8,16 +8,11 @@
   left: 0;
   position: fixed;
   display: flex;
-  flex-direction: column;
-  @include min-md {
-    flex-direction: row;
-  }
+  
+  @include breakpoint-lock(column, row, flex-direction);
   
   .header {
-    flex: 1;
-    @include min-md {
-      flex: 2;
-    }
+    @include breakpoint-lock(1, 2, flex);
     margin: 0;
   }
   &__list {
@@ -28,10 +23,7 @@
     align-items: center;
     list-style: none;
     
-    flex: 3;
-    @include min-md {
-      flex: 1;
-    }
+    @include breakpoint-lock(3, 1, flex);
     flex-direction: column;
     margin: 0;
   }

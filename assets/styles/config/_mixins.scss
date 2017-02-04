@@ -28,3 +28,24 @@
     @content;
   }
 }
+
+
+@mixin breakpoint-lock(
+  $a,
+  $b,
+  $property,
+  $breakpoint: 800px) {
+
+  @media (max-width: #{$breakpoint}) {
+    #{$property}: #{$a};
+  }
+
+  @media (min-width: #{$breakpoint}) {
+    #{$property}: #{$b};
+  }
+}
+
+@mixin square($width, $height) {
+  width: #{$width};
+  height: #{$height};
+}
