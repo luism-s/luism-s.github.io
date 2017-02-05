@@ -65,14 +65,11 @@
 
   &__showcase {
       
-    top: 0;
     left: -100%;
     right: 100%;
-    top: 20%;
     z-index: 2;
     transition: all .5s ease-out;
-    width: 95%;
-    max-width: 750px;
+    width: 100%;
     text-align: left;
     background-color: white;
     margin: 0 auto;
@@ -80,6 +77,10 @@
 
     @include breakpoint-lock(15px, 15px 35px 35px, padding);
     @include breakpoint-lock(fixed, absolute, position);
+    @include breakpoint-lock(initial, 750px, max-width);
+    @include breakpoint-lock(0, 20%, top);
+    @include breakpoint-lock(scroll, initial, overflow);
+    @include breakpoint-lock(100%, auto, height);
 
     &-body {
       @include breakpoint-lock(initial, flex, display);
@@ -101,7 +102,7 @@
 
   &__details {
 
-    padding: 0px 15px;
+    @include breakpoint-lock(15px 0px, 0px 15px, margin);
     font-size: 13px;
     flex: 1;
     display: flex;
