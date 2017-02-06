@@ -34,6 +34,7 @@ function showWork(work_id) {
   var showcase = '[work_id=' + work_id + '] .js-work-showcase';
   if( work_id >= 0 && !$(showcase).hasClass("work__showcase--shown") ) {
     $(showcase).addClass('work__showcase--shown');
+    var work_name = $('[work_id=' + work_id + '] .work__preview-title').html();
     ga('send', 'event', 'Works', 'view', work_name);
   }
 }
