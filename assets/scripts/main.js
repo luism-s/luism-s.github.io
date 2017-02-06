@@ -1,3 +1,8 @@
+function sendWorkTracking(work_id, behaviour) {
+  var work_name = $('[work_id=' + work_id + '] .work__preview-title').html();
+  ga('send', 'event', 'Works - ' + behaviour, 'click', work_name, work_id);
+}
+
 function renderWorks() {
   'use strict';
   var template, rendered;
@@ -29,6 +34,7 @@ function showWork(work_id) {
   var showcase = '[work_id=' + work_id + '] .js-work-showcase';
   if( work_id >= 0 && !$(showcase).hasClass("work__showcase--shown") ) {
     $(showcase).addClass('work__showcase--shown');
+    ga('send', 'event', 'Works', 'view', work_name);
   }
 }
 
@@ -57,6 +63,7 @@ $(function () {
     var work_id = $(this).parent().attr('work_id');
     hideWork();
     showWork(work_id);
+    sendWorkTracking(work_id, 'Spontaneous');
   });
 
 
@@ -67,9 +74,16 @@ $(function () {
 
     if( $(this).hasClass("js-switch-work--previous") && shown_work_id > 0 ) {
       next_work_id--;
+      sendWorkTracking(next_work_id, 'Switch/Bakwards');
     } else if( $(this).hasClass("js-switch-work--next") && shown_work_id < number_of_works-1) {
       next_work_id++;
+      sendWorkTracking(next_work_id, 'Switch/Forwards');
     }
     switchWork(shown_work_id, next_work_id);
+  });
+
+  $(document).on("click", ".js-contact-link a", function () {
+    var link = $(this).html();
+    ga('send', 'event', 'Contacts', 'click', link);
   });
 });
