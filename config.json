@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "js": [
+      "node_modules/jquery/dist/jquery.min.js",
+      "node_modules/mustache/mustache.min.js",
+      "assets/scripts/main.js"
+    ],
+    "css": [
+      "node_modules/normalize-css/normalize.css",
+      "assets/styles/main.scss"
+    ],
+    "fonts": [
+      "assets/fonts/**/*"
+    ],
+    "images": [
+      "assets/images/**/*"
+    ]
+  },
+  "jslintFiles": [
+      "assets/scripts/main.js"
+  ],
+  "devUrl": "http://luism-s.github.dev",
+  "paths": {
+    "source": "assets/",
+    "dist": "dist/"
+  },
+  "watch": [
+      "*.html"
+  ]
+}

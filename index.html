@@ -83,48 +83,47 @@
   <script src="/dist/scripts/main.js"></script>
 
   <script id="works-template" type="mustache/x-tmpl">
-    {{#works}}
-      <article class="js-work work" work_id="{{index}}">
-        <div class="js-work-preview work__preview">
-          <h5 class="work__preview-title">{{name}}</h5>
-          <img class="work__preview-img" src="{{screenshot_desktop}}" alt="{{name}}">
-          <div class="shadow"></div>
-        </div>
+        {{#works}}
+          <article class="js-work work" work_id="{{index}}">
+            <div class="js-work-preview work__preview">
+              <h5 class="work__preview-title">{{name}}</h5>
+              <img class="work__preview-img" src="{{screenshot_desktop}}" alt="{{name}}">
+              <div class="shadow"></div>
+            </div>
 
-        <div class="js-work-showcase work__showcase">
-          <div class="work__showcase-header">
-            <span class="navigation">
-              <span class="js-switch-work js-switch-work--previous button button__navigation button__navigation--left"></span>
-              <span class="js-switch-work js-switch-work--next button button__navigation button__navigation--right"></span>
-            </span>
-            <span class="js-close-work button button__close"></span>
-          </div>
-          <div class="work__showcase-body">
+            <div class="js-work-showcase work__showcase">
+              <div class="work__showcase-header">
+                <span class="navigation">
+                  <span class="js-switch-work js-switch-work--previous button button__navigation button__navigation--left"></span>
+                  <span class="js-switch-work js-switch-work--next button button__navigation button__navigation--right"></span>
+                </span>
+                <span class="js-close-work button button__close"></span>
+              </div>
+              <div class="work__showcase-body">
 
-            <div class="device device--desktop">
-              <div class="device__frame">
-                  <img src="{{screenshot_desktop}}" alt="{{name}}">
+                <div class="device device--desktop">
+                  <div class="device__frame">
+                      <img src="{{screenshot_desktop}}" alt="{{name}}">
+                  </div>
+                </div>
+
+                <div class="work__details">
+                  <h5 class="title work__details-title">
+                    {{name}}
+                    <hr>
+                  </h5>
+                  <span class="work__details-title--sub">{{role}}</span>
+                  <p class="work__details-description">{{description}}</p>
+                  <footer class="work__details-footer">
+                    <a class="work__details-link" href="{{url}}">{{simple_url}}</a>
+                  </footer>
+                </div>
+
               </div>
             </div>
-
-            <div class="work__details">
-              <h5 class="title work__details-title">
-                {{name}}
-                <hr>
-              </h5>
-              <span class="work__details-title--sub">{{role}}</span>
-              <p class="work__details-description">{{description}}</p>
-              <footer class="work__details-footer">
-                <a class="work__details-link" href="{{url}}">{{simple_url}}</a>
-              </footer>
-            </div>
-
-          </div>
-        </div>
-      </article>
-    {{/works}}
+          </article>
+        {{/works}}
   </script>
-
 </body>
 
 </html>

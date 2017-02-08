@@ -79,7 +79,7 @@
     @include breakpoint-lock(fixed, absolute, position);
     @include breakpoint-lock(initial, 750px, max-width);
     @include breakpoint-lock(0, 20%, top);
-    @include breakpoint-lock(scroll, initial, overflow);
+    @include breakpoint-lock(auto, initial, overflow-y);
     @include breakpoint-lock(100%, auto, height);
 
     &-body {
