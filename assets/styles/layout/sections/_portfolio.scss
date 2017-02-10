@@ -13,13 +13,12 @@
 }
 .works {
   display: flex;
-  @include breakpoint-lock(column, row, flex-direction);
-  @include breakpoint-lock(center, flex-start, align-items);
+  overflow: auto;
 }
 .work {
 
   margin: 5px;
-  &__preview {
+  &-preview {
     width: 250px;
     @include breakpoint-lock(150px, 200px, height);
     overflow: hidden;
@@ -39,7 +38,7 @@
     }
 
     &:hover {
-      & .work__preview-title {
+      & .work-preview__title {
         opacity: 1;
         z-index: 1;
       }
@@ -49,7 +48,7 @@
       }
     }
     
-    &-title {
+    &__title {
       position: absolute;    
       margin: auto;
       left: 0;
@@ -63,12 +62,12 @@
     }
   }
 
-  &__showcase {
+  &-showcase {
       
     left: -100%;
     right: 100%;
     z-index: 2;
-    transition: all .5s ease-out;
+    transition: all .4s cubic-bezier(.45,.05,.55,.95);
     width: 100%;
     text-align: left;
     background-color: white;
@@ -81,12 +80,12 @@
     @include breakpoint-lock(0, 20%, top);
     @include breakpoint-lock(auto, initial, overflow-y);
     @include breakpoint-lock(100%, auto, height);
-
-    &-body {
+    
+    &__body {
       @include breakpoint-lock(initial, flex, display);
     }
 
-    &-header {
+    &__header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -100,7 +99,7 @@
     }
   }
 
-  &__details {
+  &-details {
 
     @include breakpoint-lock(15px 0px, 0px 15px, margin);
     font-size: 13px;
@@ -108,23 +107,33 @@
     display: flex;
     flex-direction: column;
     
-    &-title {
+    &__title {
       font-size: 1em;
       margin: 0;
+      font-weight: 400;
+
+      &::after {
+        content: '';
+        width: 100%;
+        display: block;
+        height: 1px;
+        background: rgba(0,0,0,.75);
+        margin: 7px 0;
+      }
       &--sub {
         font-size: 0.85em;
         align-self: flex-end;
       }
     }
-    &-description {
+    &__description {
       margin: 1em 0;
-      font-size: 0.9em;
+      font-size: 0.95em;
     }
-    &-footer {
+    &__footer {
       margin: 10px 0;
       font-size: 0.85em;
     }
-    &-link {
+    &__link {
       position: relative;
       &::before {
         content:'';

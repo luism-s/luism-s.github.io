@@ -24,16 +24,16 @@ function renderWorks() {
 function hideWork(work_id) {
   'use strict';
   if(work_id >= 0) {
-    $('[work_id=' + work_id + '] .js-work-showcase').removeClass('work__showcase--shown');
+    $('[work_id=' + work_id + '] .js-work-showcase').removeClass('work-showcase--shown');
   } else {
-    $('.js-work-showcase').removeClass('work__showcase--shown');
+    $('.js-work-showcase').removeClass('work-showcase--shown');
   }
 }
 
 function showWork(work_id) {
   var showcase = '[work_id=' + work_id + '] .js-work-showcase';
-  if( work_id >= 0 && !$(showcase).hasClass("work__showcase--shown") ) {
-    $(showcase).addClass('work__showcase--shown');
+  if( work_id >= 0 && !$(showcase).hasClass("work-showcase--shown") ) {
+    $(showcase).addClass('work-showcase--shown');
     var work_name = $('[work_id=' + work_id + '] .work__preview-title').html();
     ga('send', 'event', 'Works', 'view', work_name);
   }
@@ -69,7 +69,7 @@ $(function () {
 
 
   $(document).on("click", ".js-switch-work", function () {
-    var shown_work_id = Number($('.work__showcase--shown').parent().attr('work_id'));
+    var shown_work_id = Number($('.work-showcase--shown').parent().attr('work_id'));
     var next_work_id = shown_work_id;
     var number_of_works = $('.work').length;
 

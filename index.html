@@ -26,103 +26,99 @@
 
 <body>
   <section class="presentation">
-      <header class="header">
-        <h1 class="header__title">Luís Silva</h1>
-        <h1 class="header__title header__title--sub">Web Developer</h1>
-      </header>
+    <header class="header">
+      <h1 class="header__title">Luís Silva</h1>
+      <h1 class="header__title header__title--sub">Web Developer</h1>
+    </header>
   </section>
 
   <main>
     <section class="portfolio">
-        <header class="header">
-          <h1 class="header__title">Portfolio</h1>
-        </header>
-        <div class="container works" id="works"></div>
+      <header class="header">
+        <h1 class="title header__title">Portfolio</h1>
+      </header>
+      <div class="container works" id="works"></div>
     </section>
 
     <section class="contacts">
       <header class="header">
-        <h1 class="header__title">Contacts</h1>
+        <h1 class="title header__title">Contacts</h1>
       </header>
       <ul class="contacts__list">
         <li class="contact">
-            <span class="contact__icon">
-              <img src="/dist/images/icons/email.svg" alt="Email Logo">
-            </span>
-            <span class="js-contact-link contact__link">
-              <a href="mailto:luis.m.silva@mail.com">luis.m.silva@mail.com</a>
-            </span>
+          <span class="contact__icon">
+            <img src="/dist/images/icons/email.svg" alt="Email Logo">
+          </span>
+          <span class="js-contact-link contact__link">
+            <a href="mailto:luis.m.silva@mail.com">luis.m.silva@mail.com</a>
+          </span>
         </li>
         <li class="contact">
-            <span class="contact__icon">
-              <img src="/dist/images/icons/github.svg" alt="Github Logo">
-            </span>
-            <span class="js-contact-link contact__link contact__link--short">
-              <a target="_blank" href="https://github.com/luism-s">github.com/luism-s</a>
-            </span>
+          <span class="contact__icon">
+            <img src="/dist/images/icons/github.svg" alt="Github Logo">
+          </span>
+          <span class="js-contact-link contact__link contact__link--short">
+            <a target="_blank" href="https://github.com/luism-s">github.com/luism-s</a>
+          </span>
         </li>
         <li class="contact">
-            <span class="contact__icon">
-              <img src="/dist/images/icons/linkedin.svg" alt="Linkedin Logo">
-            </span>
-            <span class="js-contact-link contact__link contact__link--large">
-              <a target="_blank" href="https://www.linkedin.com/in/luis-m-silva">linkedin.com/in/luis-m-silva</a>
-            </span>
+          <span class="contact__icon">
+            <img src="/dist/images/icons/linkedin.svg" alt="Linkedin Logo">
+          </span>
+          <span class="js-contact-link contact__link contact__link--large">
+            <a target="_blank" href="https://www.linkedin.com/in/luis-m-silva">linkedin.com/in/luis-m-silva</a>
+          </span>
         </li>
       </ul>
     </section>
   </main>
 
-
   <footer class="site-footer">
-
     <p>Copyright &copy 2017 Luís Silva</p>
-
   </footer>
 
   <script src="/dist/scripts/main.js"></script>
 
   <script id="works-template" type="mustache/x-tmpl">
-        {{#works}}
-          <article class="js-work work" work_id="{{index}}">
-            <div class="js-work-preview work__preview">
-              <h5 class="work__preview-title">{{name}}</h5>
-              <img class="work__preview-img" src="{{screenshot_desktop}}" alt="{{name}}">
-              <div class="shadow"></div>
-            </div>
+    {{#works}}
+      <article class="js-work work" work_id="{{index}}">
+        <div class="js-work-preview work-preview">
+          <h5 class="title work-preview__title">{{name}}</h5>
+          <img class="work-preview__img" src="{{screenshot_desktop}}" alt="{{name}}">
+          <div class="shadow"></div>
+        </div>
 
-            <div class="js-work-showcase work__showcase">
-              <div class="work__showcase-header">
-                <span class="navigation">
-                  <span class="js-switch-work js-switch-work--previous button button__navigation button__navigation--left"></span>
-                  <span class="js-switch-work js-switch-work--next button button__navigation button__navigation--right"></span>
-                </span>
-                <span class="js-close-work button button__close"></span>
-              </div>
-              <div class="work__showcase-body">
+        <div class="js-work-showcase work-showcase">
+          <div class="work-showcase__header">
+            <span class="navigation">
+              <span class="js-switch-work js-switch-work--previous button button__navigation button__navigation--left"></span>
+              <span class="js-switch-work js-switch-work--next button button__navigation button__navigation--right"></span>
+            </span>
+            <span class="js-close-work button button__close"></span>
+          </div>
+          <div class="work-showcase__body">
 
-                <div class="device device--desktop">
-                  <div class="device__frame">
-                      <img src="{{screenshot_desktop}}" alt="{{name}}">
-                  </div>
-                </div>
-
-                <div class="work__details">
-                  <h5 class="title work__details-title">
-                    {{name}}
-                    <hr>
-                  </h5>
-                  <span class="work__details-title--sub">{{role}}</span>
-                  <p class="work__details-description">{{description}}</p>
-                  <footer class="work__details-footer">
-                    <a class="work__details-link" href="{{url}}">{{simple_url}}</a>
-                  </footer>
-                </div>
-
+            <div class="device device--desktop">
+              <div class="device__frame">
+                <img src="{{screenshot_desktop}}" alt="{{name}}">
               </div>
             </div>
-          </article>
-        {{/works}}
+
+            <div class="work-details">
+              <h5 class="title work-details__title">
+                {{name}}
+              </h5>
+              <span class="work-details__title--sub">{{role}}</span>
+              <p class="work-details__description">{{description}}</p>
+              <footer class="work-details__footer">
+                <a class="work-details__link" href="{{url}}">{{simple_url}}</a>
+              </footer>
+            </div>
+
+          </div>
+        </div>
+      </article>
+    {{/works}}
   </script>
 </body>
 
