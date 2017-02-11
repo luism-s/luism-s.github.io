@@ -1,6 +1,6 @@
-function sendWorkTracking(work_id, behaviour) {
-  var work_name = $('[work_id=' + work_id + '] .work__preview-title').html();
-  ga('send', 'event', 'Works - ' + behaviour, 'click', work_name, work_id);
+function workTracking(work_id, behaviour) {
+  var work_name = $('[work_id=' + work_id + '] .js-work-preview-title').html();
+  ga('send', 'event', 'Works', behaviour, work_name, work_id);
 }
 
 function renderWorks() {
@@ -34,8 +34,7 @@ function showWork(work_id) {
   var showcase = '[work_id=' + work_id + '] .js-work-showcase';
   if( work_id >= 0 && !$(showcase).hasClass("work-showcase--shown") ) {
     $(showcase).addClass('work-showcase--shown');
-    var work_name = $('[work_id=' + work_id + '] .work__preview-title').html();
-    ga('send', 'event', 'Works', 'view', work_name);
+    workTracking(work_id, 'view');
   }
 }
 
@@ -64,23 +63,23 @@ $(function () {
     var work_id = $(this).parent().attr('work_id');
     hideWork();
     showWork(work_id);
-    sendWorkTracking(work_id, 'Spontaneous');
+    workTracking(work_id, 'click');
   });
 
 
   $(document).on("click", ".js-switch-work", function () {
-    var shown_work_id = Number($('.work-showcase--shown').parent().attr('work_id'));
-    var next_work_id = shown_work_id;
+    var work_id = Number($('.work-showcase--shown').parent().attr('work_id'));
+    var next_work_id = work_id;
     var number_of_works = $('.work').length;
 
-    if( $(this).hasClass("js-switch-work--previous") && shown_work_id > 0 ) {
+    if( $(this).hasClass("js-switch-work--previous") && work_id > 0 ) {
       next_work_id--;
-      sendWorkTracking(next_work_id, 'Switch/Bakwards');
-    } else if( $(this).hasClass("js-switch-work--next") && shown_work_id < number_of_works-1) {
+      workTracking(next_work_id, 'swich/backwards');
+    } else if( $(this).hasClass("js-switch-work--next") && work_id < (number_of_works - 1) ) {
       next_work_id++;
-      sendWorkTracking(next_work_id, 'Switch/Forwards');
+      workTracking(next_work_id, 'swich/forwards');
     }
-    switchWork(shown_work_id, next_work_id);
+    switchWork(work_id, next_work_id);
   });
 
   $(document).on("click", ".js-contact-link a", function () {
