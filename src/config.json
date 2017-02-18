@@ -22,9 +22,9 @@
   "devUrl": "http://luism-s.github.dev",
   "paths": {
     "source": "assets/",
-    "dist": "dist/"
+    "dist": "../dist/"
   },
   "watch": [
-      "*.html"
+      "../*.html"
   ]
 }

@@ -28,12 +28,14 @@ function hideWork(work_id) {
   } else {
     $('.js-work-showcase').removeClass('work-showcase--shown');
   }
+  $('.dimmed_background').removeClass('dimmed_background--active');
 }
 
 function showWork(work_id) {
   var showcase = '[work_id=' + work_id + '] .js-work-showcase';
   if( work_id >= 0 && !$(showcase).hasClass("work-showcase--shown") ) {
     $(showcase).addClass('work-showcase--shown');
+    $('.dimmed_background').addClass('dimmed_background--active');
     workTracking(work_id, 'view');
   }
 }

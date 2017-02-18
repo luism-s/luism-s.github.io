@@ -18,7 +18,7 @@
     }, i[r].l = 1 * new Date(); a = s.createElement(o),
       m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
     })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-    ga('create', 'UA-71600725-2', 'auto');
+    //ga('create', 'UA-71600725-2', 'auto');
     ga('send', 'pageview');
   </script>
 
@@ -29,16 +29,17 @@
     <header class="header">
       <h1 class="header__title">Luís Silva</h1>
       <h1 class="header__title header__title--sub">Web Developer</h1>
-    </header>
-  </section>
+    </header>  <!-- /header -->
+  </section> <!-- /presentation -->
 
   <main>
     <section class="portfolio">
       <header class="header">
         <h1 class="title header__title">Portfolio</h1>
-      </header>
-      <div class="container works" id="works"></div>
-    </section>
+      </header>  <!-- /header -->
+      <div class="container works" id="works"></div> <!-- /works -->
+      <div class="dimmed_background"></div>
+    </section> <!-- /portfolio -->
 
     <section class="contacts">
       <header class="header">
@@ -70,12 +71,12 @@
           </span>
         </li>
       </ul>
-    </section>
-  </main>
+    </section> <!-- /contacts -->
+  </main>  <!-- /main -->
 
   <footer class="site-footer">
     <p>Copyright &copy 2017 Luís Silva</p>
-  </footer>
+  </footer> <!-- /footer -->
 
   <script src="/dist/scripts/main.js"></script>
 
@@ -119,7 +120,7 @@
         </div>
       </article>
     {{/works}}
-  </script>
+  </script> <!-- /works template -->
 </body>
 
 </html>

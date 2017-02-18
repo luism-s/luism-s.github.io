@@ -10,7 +10,7 @@ global.filelog      = require('gulp-filelog');
 global.lazypipe     = require('lazypipe');
 global.browserSync  = require('browser-sync');
 
-global.prod    = argv.production,
+global.prod    = argv.prod,
 global.lintjs  = argv.lintjs;
 
 global.config  = require('./config.json'),
