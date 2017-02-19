@@ -6,16 +6,15 @@ section.presentation {
   justify-content: center;
   align-items: center;
 
-
   .header {
     &__title {
       opacity: 0;
     }
     &__title {
-        @include fadeIn(0.5s);
-        &--sub {
-          @include fadeIn(0.75s, 0.5s);
-        }
+      @include fadeIn(0.5s);
+      &--sub {
+        @include fadeIn(0.75s, 0.5s);
+      }
     }
   }
 }

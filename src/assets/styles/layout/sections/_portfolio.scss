@@ -78,9 +78,9 @@
     margin: 0 auto;
     box-sizing: border-box;
 
-    @include breakpoint-lock(15px, 15px 35px 35px, padding);
+    @include breakpoint-lock(15px, 30px 35px 50px, padding);
     @include breakpoint-lock(fixed, absolute, position);
-    @include breakpoint-lock(initial, 750px, max-width);
+    @include breakpoint-lock(initial, 900px, max-width);
     @include breakpoint-lock(0, 20%, top);
     @include breakpoint-lock(auto, initial, overflow-y);
     @include breakpoint-lock(100%, auto, height);
