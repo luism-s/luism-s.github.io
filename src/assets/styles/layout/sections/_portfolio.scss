@@ -97,7 +97,7 @@
 
     }
     
-    &--shown {
+    &.-shown {
       left: 0;
       right: 0;
     }
@@ -124,13 +124,17 @@
         background: rgba(0,0,0,.75);
         margin: 7px 0;
       }
-      &--sub {
+      &.-sub {
         font-size: 0.85em;
         align-self: flex-end;
+        margin-top: 4px;
+        &::after {
+          display: none;
+        }
       }
     }
     &__description {
-      margin: 1em 0;
+      margin: 20px 0 10px 0;
       font-size: 0.95em;
     }
     &__footer {
@@ -177,7 +181,7 @@
   display: none;
   opacity: 0;
   transition: opacity 0.2s ease;
-  &--active {
+  &.-active {
     display: block;
     opacity: 1;
   }

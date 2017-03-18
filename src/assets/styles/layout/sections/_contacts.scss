@@ -39,10 +39,10 @@
       height: initial;
       width: 140px;
       opacity: 1;
-      &--short {
+      &.-short {
         width: 125px;
       }
-      &--large {
+      &.-large {
         width: 175px;
       }
     }

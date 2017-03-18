@@ -22,11 +22,11 @@ $device-color: #f1f1f1;
     height: 100%;
   }
     
-  &--phone {
+  &.-phone {
     width: $phone-width; 
     height: $phone-height;
   }
-  &--desktop {
+  &.-desktop {
     width: 500px; 
     height: 275px;
   }
@@ -34,11 +34,11 @@ $device-color: #f1f1f1;
 
 @include max-md {
 
-  .device--phone {
+  .devic.-phone {
     display: none;
   }
 
-  .device--desktop {
+  .device.-desktop {
     height: 175px;
     width: calc(100% - 10px);
   }

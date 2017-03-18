@@ -4,10 +4,9 @@
 
     font-size: 12px;
     width: 1em;
+    height: 1em;
     position: relative;
-    @include min-md {
-      
-    }
+    
     &:hover {
       
       &::after {
@@ -26,17 +25,15 @@
       display: inline-block;
       transform-origin: center center;
       transition: transform 0.2s linear;
-      position: relative;
+      position: absolute;
     }
 
     &::after {
       transform: rotate(45deg);
-      right: calc(-0.5em + 1px);
     }
 
     &::before {
       transform: rotate(-45deg);
-      right: -0.5em;
     }
   }
 
@@ -62,20 +59,20 @@
       color: #333;
       line-height: 1em;
     }
-    &--left {
+    &.-left {
 
       &::after {
         content: '<';
       }
     }
-    &--right {
+    &.-right {
 
       &::after {
         content: '>';
       }
     }
 
-    &--inactive {
+    &.-inactive {
       &, &:hover {
         background-color: initial;
         cursor: initial;

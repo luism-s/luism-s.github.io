@@ -12,7 +12,7 @@ section.presentation {
     }
     &__title {
       @include fadeIn(0.5s);
-      &--sub {
+      &.-sub {
         @include fadeIn(0.75s, 0.5s);
       }
     }
