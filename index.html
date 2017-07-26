@@ -33,13 +33,6 @@
   </section> <!-- /presentation -->
 
   <main>
-    <section class="portfolio">
-      <header class="header">
-        <h1 class="title header__title">Portfolio</h1>
-      </header>  <!-- /header -->
-      <div class="container works" id="works"></div> <!-- /works -->
-      <div class="dimmed_background"></div>
-    </section> <!-- /portfolio -->
 
     <section class="contacts">
       <header class="header">
@@ -80,47 +73,6 @@
 
   <script src="/dist/scripts/main.js"></script>
 
-  <script id="works-template" type="mustache/x-tmpl">
-    {{#works}}
-      <article class="js-work work" work_id="{{index}}">
-        <div class="js-work-preview work-preview">
-          <h5 class="title js-work-preview-title work-preview__title">{{name}}</h5>
-          <img class="work-preview__img" src="{{screenshot_desktop}}" alt="{{name}}">
-          <div class="shadow"></div>
-        </div>
-
-        <div class="js-work-showcase work-showcase">
-          <div class="work-showcase__header">
-            <span class="navigation">
-              <span class="js-switch-work -previous button button__navigation -left"></span>
-              <span class="js-switch-work -next button button__navigation -right"></span>
-            </span>
-            <span class="js-close-work button button__close"></span>
-          </div>
-          <div class="work-showcase__body">
-
-            <div class="device -desktop">
-              <div class="device__frame">
-                <img src="{{screenshot_desktop}}" alt="{{name}}">
-              </div>
-            </div>
-
-            <div class="work-details">
-              <h5 class="title work-details__title">
-                {{name}}
-              </h5>
-              <span class="work-details__title -sub">{{role}}</span>
-              <p class="work-details__description">{{description}}</p>
-              <footer class="work-details__footer">
-                <a class="work-details__link" href="{{url}}">{{simple_url}}</a>
-              </footer>
-            </div>
-
-          </div>
-        </div>
-      </article>
-    {{/works}}
-  </script> <!-- /works template -->
 </body>
 
 </html>

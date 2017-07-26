@@ -1,4 +1,4 @@
-function workTracking( work_id, behaviour ) {
+/* function workTracking( work_id, behaviour ) {
   var work_name = $( '[work_id=' + work_id + '] .js-work-preview-title' ).html();
   ga( 'send', 'event', 'Works', behaviour, work_name, work_id );
 }
@@ -48,10 +48,10 @@ function switchWork( shown_work_id, next_work_id ) {
     showWork( next_work_id );
   }
 }
-
+ */
 $( function () {
   'use strict';
-  renderWorks();
+/*   renderWorks();
 
   $( document ).on( 'click', '.js-close-work', function () {
     hideWork();
@@ -84,7 +84,7 @@ $( function () {
       workTracking( next_work_id, 'swich/forwards' );
     }
     switchWork( work_id, next_work_id );
-  } );
+  } ); */
 
   $( document ).on( 'click', '.js-contact-link a', function () {
     ga( 'send', 'event', 'Contacts', 'click', $( this ).html() );
