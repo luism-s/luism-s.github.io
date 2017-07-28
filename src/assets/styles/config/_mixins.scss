@@ -19,7 +19,7 @@
 }
 
 @mixin min-md {
-  @media (min-width: 800px) {
+  @media (min-width: 799px) {
     @content;
   }
 }

@@ -1,39 +1,66 @@
 .contacts {
-  background: $color-four;
   color: black;
   z-index: 1;
-  height: 100vh;
+
+  height: 500px;
   width: 100%;
-  bottom: 0;
+
   left: 0;
+  bottom: 0;
+
   position: fixed;
   display: flex;
-  
-  @include breakpoint-lock(column, row, flex-direction);
+  flex-direction: column;
+
+  @include max-md {
+    min-height: initial;
+  }
+  @include min-md {
+    height: 100vh;
+    flex-direction: row;
+    background: $color-four;
+  }
   
   .header {
-    @include breakpoint-lock(1, 2, flex);
-    margin: 0;
+    @include min-md {
+      flex: 2;
+    }
   }
   &__list {
-    background: white;
+    margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+    background: white;
+
     list-style: none;
     
-    @include breakpoint-lock(3, 1, flex);
+    display: flex;
     flex-direction: column;
-    margin: 0;
+    justify-content: center;
+    flex: 3;
+    
+    @include max-md {
+      transform: translate(0, -37px);
+      width: 215px;
+      margin: 0 auto;
+      align-items: flex-start;
+    }
+
+    @include min-md {
+      flex: 1;
+      align-items: center;
+    }
   }
 
 }
 
 .contact {
-  margin: 20px 0;
-  width: 65%;
-
+  margin: 10px 0;
+  @include min-md {
+    margin: 20px 0;
+    width: 75%;
+    min-width: 215px;
+  }
   &:hover {
     .contact__link {
       height: initial;

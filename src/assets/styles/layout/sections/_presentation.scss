@@ -5,7 +5,11 @@ section.presentation {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 100vh;
+  margin-bottom: 463px;
+
+  @include min-md {
+    margin-bottom: 100vh;
+  }
 
   .header {
     &__title {
