@@ -1,6 +1,5 @@
-var clean = require('gulp-clean');
+var del   = require('del');
 
-gulp.task('clean', function () {
-	return gulp.src(paths.dist, {read: false} )
-        .pipe(clean({force: true}));
-});
+// ### Clean
+// `gulp clean` - Deletes the build folder entirely.
+gulp.task('clean', del.bind(null, [paths.dist], {force: true}));

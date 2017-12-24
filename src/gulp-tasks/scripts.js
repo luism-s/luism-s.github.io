@@ -1,20 +1,43 @@
-var jshint      = require('gulp-jshint');
+var lazypipe    = require('lazypipe');
+var gulpif      = require('gulp-if');
 var uglify      = require('gulp-uglify');
-var concat      = require('gulp-concat');
 var sourcemaps  = require('gulp-sourcemaps');
+var concat      = require('gulp-concat');
 
-gulp.task('jshint', function() {
-  return gulp.src(['../gulpfile.js', '../config.js'].concat(config.jslintFiles))
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'));
-});
+// ### JS processing pipeline
+// Example
+// ```
+// gulp.src(jsFiles)
+//   .pipe(jsTasks('main.js')
+//   .pipe(gulp.dest(paths.dist + 'scripts'))
+// ```
+var jsTasks = function(independent) {
+  var independent = independent || false;
+  return lazypipe()
+    .pipe(function() {
+      return gulpif(enabled.maps, sourcemaps.init());
+    })
+    .pipe(function() {
+      return gulpif(!independent, concat('main.js'));
+    })
+    .pipe(function() {
+      return gulpif(enabled.minify, uglify({
+          compress: {
+            'drop_debugger': enabled.stripJSDebug
+          }
+      }));
+    })
+    .pipe(function() {
+      return gulpif(enabled.maps, sourcemaps.write('.', {
+        sourceRoot: paths.source + 'scripts'
+      }));
+    })();
+};
 
-gulp.task('scripts', ['jshint'], function() {
-
-    return gulp.src(deps.js)
-        .pipe(gulpif(!prod, sourcemaps.init()))
-        .pipe(concat('main.js'))
-        .pipe(gulpif(!prod, sourcemaps.write('.')))
-        .pipe(gulpif(prod, uglify()))
-        .pipe(finalize('scripts'));
+// ### Scripts
+// `gulp scripts` - Ccccompiles, combines, and optimizes JS
+gulp.task('scripts', function() {
+  return gulp.src(deps.js)
+    .pipe(jsTasks())
+    .pipe(finalize('scripts'));
 });

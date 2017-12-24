@@ -22,3 +22,5 @@ nbproject
 .env
 .env*
 !.env.example
+
+npm-debug.log

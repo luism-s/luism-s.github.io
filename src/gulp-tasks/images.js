@@ -1,11 +1,13 @@
-var imagemin = require('gulp-imagemin');
+var imagemin  = require('gulp-imagemin');
 
-gulp.task('images', function () {
-    gulp.src(deps.images)
-        .pipe(gulpif(prod, imagemin({
-            optimizationLevel: 5,
-            progressive: true,
-            interlaced: true
-        })))
-        .pipe(finalize('images'));
+// ### Images
+// `gulp images` - Run lossless compression on all the images.
+gulp.task('images', function() {
+  return gulp.src(deps.images)
+    .pipe(imagemin({
+      progressive: true,
+      interlaced: true,
+      svgoPlugins: [{removeUnknownsAndDefaults: false}, {cleanupIDs: false}]
+    }))
+    .pipe(finalize('images'));
 });
