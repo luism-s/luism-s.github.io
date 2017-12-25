@@ -16,9 +16,7 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-71600725-2');
+    gtag('js', new Date());gtag('config', 'UA-71600725-2');
   </script>
 
 
@@ -39,30 +37,30 @@
       <header class="header">
         <h1 class="title header__title">Contacts</h1>
       </header>
-      <ul class="contacts__list">
-        <li class="contact">
-          <span class="contact__icon">
-            <img src="/dist/images/icons/email.svg" alt="Email Logo">
-          </span>
-          <span class="js-contact-link contact__link">
-            <a href="mailto:luis.m.silva@mail.com">luis.m.silva@mail.com</a>
-          </span>
+      <ul class="contact__list">
+        <li>
+          <a class="contact" href="mailto:luis.m.silva@mail.com">
+            <span class="contact__icon">
+              <img src="/dist/images/icons/email.svg" alt="Email Logo">
+            </span>
+            <span class="contact__text">luis.m.silva@mail.com</span>
+          </a>
         </li>
-        <li class="contact">
-          <span class="contact__icon">
-            <img src="/dist/images/icons/github.svg" alt="Github Logo">
-          </span>
-          <span class="js-contact-link contact__link -short">
-            <a target="_blank" href="https://github.com/luism-s">github.com/luism-s</a>
-          </span>
+        <li>
+          <a class="contact" target="_blank" href="https://github.com/luism-s">
+            <span class="contact__icon">
+              <img src="/dist/images/icons/github.svg" alt="Github Logo">
+            </span>
+            <span class="contact__text">github.com/luism-s</span>
+          </a>
         </li>
-        <li class="contact">
-          <span class="contact__icon">
-            <img src="/dist/images/icons/linkedin.svg" alt="Linkedin Logo">
-          </span>
-          <span class="js-contact-link contact__link -large">
-            <a target="_blank" href="https://www.linkedin.com/in/luis-m-silva">linkedin.com/in/luis-m-silva</a>
-          </span>
+        <li>
+          <a class="contact" target="_blank" href="https://www.linkedin.com/in/luis-m-silva">
+            <span class="contact__icon">
+              <img src="/dist/images/icons/linkedin.svg" alt="Linkedin Logo">
+            </span>
+            <span class="contact__text">linkedin.com/in/luis-m-silva</span>
+          </a>
         </li>
       </ul>
     </section> <!-- /contacts -->

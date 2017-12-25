@@ -18,7 +18,7 @@
   "jslintFiles": [
       "assets/scripts/main.js"
   ],
-  "devUrl": "http://luism-s.vagrant",
+  "devUrl": "http://luism-s.github.dev",
   "paths": {
     "source": "assets/",
     "dist": "../dist/"

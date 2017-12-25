@@ -18,7 +18,7 @@
   @include min-md {
     height: 100vh;
     flex-direction: row;
-    background: $color-four;
+    background: #f3f3f3;
   }
   
   .header {
@@ -26,6 +26,56 @@
       flex: 2;
     }
   }
+
+}
+
+.contact {
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: black;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:hover &__text {
+    transform: translate3d(4px, 0, 0);
+    
+    &::after {
+      transform: translate3d(100%, 0, 0);
+    }
+  }
+  
+  &__icon {
+    display: inline-block;
+    width: 25px;
+    margin: 0 10px 0 0;
+  }
+
+  &__text {
+    transition: 0.15s transform ease-in-out;
+    position: relative;
+    padding: 4px 0;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      
+      height: 1px;
+      width: 100%;
+
+      position: absolute;
+      bottom: 0;
+      left: -100%;
+
+      transition: 0.15s transform ease-in-out;
+      background-color: black;
+    }
+  }
+
+
   &__list {
     margin: 0;
     padding: 0;
@@ -38,6 +88,7 @@
     flex-direction: column;
     justify-content: center;
     flex: 3;
+
     
     @include max-md {
       transform: translate(0, -37px);
@@ -49,45 +100,15 @@
       flex: 1;
       align-items: center;
     }
-  }
 
-}
+    > * {
+      margin: 10px 0;
 
-.contact {
-  margin: 10px 0;
-  @include min-md {
-    margin: 20px 0;
-    width: 75%;
-    min-width: 215px;
-  }
-  &:hover {
-    .contact__link {
-      height: initial;
-      width: 140px;
-      opacity: 1;
-      &.-short {
-        width: 125px;
+      @include min-md {
+        margin: 20px 0;
+        width: 75%;
+        min-width: 215px;
       }
-      &.-large {
-        width: 175px;
-      }
-    }
-  }
-  &__icon, 
-  &__link {
-    vertical-align: middle;
-  }
-  
-  &__icon {
-    display: inline-block;
-    width: 25px;
-    margin: 0 5px;
-  }
-  &__link {
-    display: inline-block;
-    
-    a {
-      color: black;
     }
   }
 }
