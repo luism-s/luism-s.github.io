@@ -1,78 +1,8 @@
 .contacts {
-  color: black;
-  z-index: 1;
-
-  height: 100vh;
-  width: 100%;
-
-  left: 0;
-  bottom: 0;
-
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-
-  @include max-md {
-    min-height: initial;
-  }
-  @include min-md {
-    height: 100vh;
-    flex-direction: row;
-    background: $color-four;
-  }
-  
-  .header {
-    @include min-md {
-      flex: 2;
-    }
-  }
-  &__list {
-    margin: 0;
-    padding: 0;
-
-    background: white;
-
-    list-style: none;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 3;
-    
-    @include max-md {
-      transform: translate(0, -37px);
-      margin: 0 auto;
-      align-items: flex-start;
-    }
-
-    @include min-md {
-      flex: 1;
-      align-items: center;
-    }
-  }
 
 }
 
 .contact {
-  margin: 10px 0;
-  @include min-md {
-    margin: 20px 0;
-    width: 75%;
-    min-width: 215px;
-  }
-  &:hover {
-    .contact__link {
-      height: initial;
-      width: 140px;
-      opacity: 1;
-      &.-short {
-        width: 125px;
-      }
-      &.-large {
-        width: 175px;
-      }
-    }
-  }
   &__icon, 
   &__link {
     vertical-align: middle;
@@ -80,14 +10,7 @@
   
   &__icon {
     display: inline-block;
-    width: 25px;
-    margin: 0 5px;
   }
   &__link {
-    display: inline-block;
-    
-    a {
-      color: black;
-    }
   }
 }
