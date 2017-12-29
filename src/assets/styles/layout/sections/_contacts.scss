@@ -1,16 +1,14 @@
 .contacts {
 
 }
-
 .contact {
-  &__icon, 
-  &__link {
-    vertical-align: middle;
-  }
   
   &__icon {
-    display: inline-block;
   }
-  &__link {
+  &__text {
+  }
+
+  &__list {
+
   }
 }
