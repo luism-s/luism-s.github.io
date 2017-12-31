@@ -1,0 +1,22 @@
+section.presentation {
+  background: #095369;
+  box-shadow: 0px 5px 25px -5px rgba(0,0,0,0.75);
+  color: white;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100vh;
+
+  .header {
+    &__title {
+      opacity: 0;
+    }
+    &__title {
+      @include fadeIn(0.5s);
+      &.-sub {
+        @include fadeIn(0.75s, 0.5s);
+      }
+    }
+  }
+}
