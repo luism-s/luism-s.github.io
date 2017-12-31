@@ -1,5 +1,7 @@
-ul.reset-list > li::before {
-  content: initial;
+ul {
+  &.reset-list > li::before {
+    content: initial;
+  }
 }
 
 a.reset-link:hover {

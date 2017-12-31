@@ -11,6 +11,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font-size: 16px;
+  color: $primary-text-color;
 }
 
 body {
@@ -62,7 +63,7 @@ a {
     outline: none;
   }
 
-  .avoid-link-color-conflict & {
+  .avoid-color-conflict & {
     color: white;
   }
 }
@@ -93,6 +94,8 @@ ul {
   > li + li {
     margin-top: 8px;
   }
+
+
 }
 
 
