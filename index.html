@@ -8,7 +8,7 @@
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href='https://fonts.googleapis.com/css?family=Roboto:100,400|Lato:300,400' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono|Work+Sans" rel="stylesheet">
   <link rel="stylesheet" href="/dist/styles/main.css">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -19,54 +19,86 @@
     gtag('js', new Date());gtag('config', 'UA-111711838-1');
   </script>
 
-
-
 </head>
 
 <body>
 
-  <main id="main">
+  <div class="sidebar-main-wrapper">
+    <aside class="site-sidebar avoid-link-color-conflict">
 
-    <section class="about">
-        <h2 class="title">Me</h2>
-    </section> <!-- /presentation -->
+      <div class="photo-icon"></div>
+      <nav class="site-navbar">
+        <ul class="reset-list-">
+          <li><a href="#" class="js-menu-item reset-link">Me</a></li>
+          <li><a href="#" class="js-menu-item reset-link">Experience</a></li>
+          <li><a href="#" class="js-menu-item reset-link">Education</a></li>
+          <li><a href="#" class="js-menu-item reset-link">Work</a></li>
+          <li><a href="#" class="js-menu-item reset-link">Contacts</a></li>
+        </ul>
+      </nav>
 
-    <section class="contacts">
-      <h2 class="title">Contacts</h2>
+    </aside>
 
-      <ul class="contact__list">
-        <li>
-          <a class="contact" href="mailto:luis.m.silva@mail.com">
-            <span class="contact__icon">
-              <img src="/dist/images/icons/email.svg" alt="Email Logo" width="25">
-            </span>
-            <span class="contact__text">luis.m.silva@mail.com</span>
-          </a>
-        </li>
-        <li>
-          <a class="contact" target="_blank" href="https://github.com/luism-s">
-            <span class="contact__icon">
-              <img src="/dist/images/icons/github.svg" alt="Github Logo" width="25">
-            </span>
-            <span class="contact__text">github.com/luism-s</span>
-          </a>
-        </li>
-        <li>
-          <a class="contact" target="_blank" href="https://www.linkedin.com/in/luis-m-silva">
-            <span class="contact__icon">
-              <img src="/dist/images/icons/linkedin.svg" alt="Linkedin Logo" width="25">
-            </span>
-            <span class="contact__text">linkedin.com/in/luis-m-silva</span>
-          </a>
-        </li>
-      </ul>
+    <div class="main-footer-wrapper">
 
-    </section> <!-- /contacts -->
-  </main>  <!-- /main -->
+      <main class="site-main" id="main">
 
-  <footer class="site-footer">
-    <p>Copyright &copy 2017 Luís Silva</p>
-  </footer> <!-- /footer -->
+        <section class="site-section about">
+          <h2 class="title">Me</h2>
+          <p>
+            Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla porttitor accumsan tincidunt.
+          </p>
+          <p>
+            Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
+          </p>
+          <p>
+            Donec rutrum congue leo eget malesuada. Cras ultricies ligula sed magna dictum porta.
+          </p>
+        </section> <!-- /presentation -->
+
+        <section class="site-section about">
+          <h2 class="title">Work</h2>
+
+          <ul>
+            <li>Multilingual Slim</li>
+            <li>Twig Gettext Parser</li>
+            <li>Wordpress Deploy Architecture</li>
+            <li>Boilerplate</li>
+            <li>TimberSage</li>
+          </ul>
+        </section> <!-- /presentation -->
+
+        <section class="site-section contacts">
+          <h2 class="title">Contacts</h2>
+          <p>
+            Email:
+            <a class="contact" href="mailto:luis.m.silva@mail.com" title="Email">
+              luis.m.silva@mail.com
+            </a>
+          </p>
+          <p>
+            Github: 
+            <a class="" target="_blank" href="https://github.com/luism-s" title="Github">
+              github.com/luism-s
+            </a>
+          </p>
+          <p>
+            Linkedin:
+            <a class="" target="_blank" href="https://www.linkedin.com/in/luis-m-silva" title="Linkedin">
+              linkedin.com/in/luis-m-silva
+            </a>
+          </p>
+        </section> <!-- /contacts -->
+
+      </main>  <!-- /main -->
+      
+      <footer class="site-footer">
+          <small>Jan. 2018, Luís Silva</small>
+      </footer> <!-- /footer -->
+
+    </div>
+
+  </div>
 
   <script src="/dist/scripts/main.js"></script>
 

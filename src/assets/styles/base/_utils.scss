@@ -1,0 +1,7 @@
+ul.reset-list > li::before {
+  content: initial;
+}
+
+a.reset-link:hover {
+  text-decoration: none;
+}
