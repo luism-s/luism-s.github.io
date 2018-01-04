@@ -12,18 +12,13 @@
 
 
 .site-main {
-  max-width: calc(512px + 64px * 2);
+  max-width: 768px;
   padding-top: 95px;
   padding-right: 64px;
   padding-bottom: 128px;
   padding-left: 64px;
 }
 
-.site-section {
-  &:not(:last-of-type) {
-    margin-bottom: 64px;
-  }
-}
 
 .site-footer {
   text-align: center;
