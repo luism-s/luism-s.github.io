@@ -13,7 +13,7 @@
 
 .site-main {
   max-width: 768px;
-  padding-top: 95px;
+  padding-top: calc(64px - 2rem/2);
   padding-right: 64px;
   padding-bottom: 128px;
   padding-left: 64px;
