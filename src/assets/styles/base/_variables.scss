@@ -1,0 +1,22 @@
+$primary-font-family: 'Space Mono', monospace, sans-serif;
+$secondary-font-family: 'Work Sans', Arial, sans-serif;
+
+$primary-color: #1a4374;
+$primary-text-color: #333333;
+
+// Breakpoints
+$bkp-xsmall: 480px;
+$bkp-small: 768px;
+$bkp-medium: 960px;
+$bkp-large: 1024px;
+$bkp-xlarge: 1280px;
+$bkp-xxlarge: 1360px;
+$bkp-full: 1500px;
+
+$bkp-xxsmall-max: ($bkp-xsmall - 1) !default;
+$bkp-xsmall-max: ($bkp-small - 1) !default;
+$bkp-small-max: ($bkp-medium - 1) !default;
+$bkp-medium-max: ($bkp-large - 1) !default;
+$bkp-large-max: ($bkp-xlarge - 1) !default;
+$bkp-xlarge-max: ($bkp-xxlarge - 1) !default;
+$bkp-xxlarge-max: ($bkp-full - 1) !default;

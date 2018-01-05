@@ -24,3 +24,9 @@ nbproject
 !.env.example
 
 npm-debug.log
+
+_site
+dist
+.sass-cache
+.jekyll-metadata
+

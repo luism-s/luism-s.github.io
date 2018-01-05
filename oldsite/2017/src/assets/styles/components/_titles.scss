@@ -1,0 +1,19 @@
+.header {
+  font-family: $header-font-family;
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+  &__title {
+    font-weight: 100;
+  }
+
+}
+
+.title {
+  font-family: $header-font-family;
+  font-weight: 100;
+  text-transform: uppercase;
+}

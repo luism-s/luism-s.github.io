@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+
+  {% include head.html %}
+
+<body>
+
+  <div class="sidebar-main-wrapper">
+
+    {% include sidebar.html %}
+
+    <div class="main-footer-wrapper">
+
+      <main class="site-main" id="main">
+        
+        {{ content }}
+        
+      </main>  <!-- /main -->
+      
+      {% include footer.html %}
+
+    </div>
+
+  </div>
+
+  <script src="/dist/scripts/main.js"></script>
+
+</body>
+
+</html>
