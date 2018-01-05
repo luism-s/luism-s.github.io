@@ -24,7 +24,6 @@
     "dist": "../dist/"
   },
   "watch": [
-    "../*.html",
-    "../_site/**/*.html"
+    "../**/*.html"
   ]
 }
