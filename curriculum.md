@@ -35,12 +35,12 @@ July 2015 – Aug. 2015
 
 ## Education
 
-Sept. 2014 – Jan.2017 
+Sept. 2014 – Jan.2017
 
-: **Post-Graduation Degree in Tel. and Computer Eng.** at [ISCTE-IUL](https://www.iscte-iul.pt/)
+: **Post-Grad. Degree** in **Telecommunations and Computer Eng.** at [ISCTE-IUL](https://www.iscte-iul.pt/)
 : Final mark: 15/20
 
 Sept. 2011 – July 2014 
 
-: **BSc Degree in Tel. and Computer Eng.** at [ISCTE-IUL](https://www.iscte-iul.pt/)
+: **BSc Degree** in **Telecommunations and Computer Eng.** at [ISCTE-IUL](https://www.iscte-iul.pt/)
 : Final mark: 14/20
