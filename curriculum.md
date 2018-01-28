@@ -3,13 +3,14 @@ layout: default
 title: Curriculum
 permalink: /curriculum/
 ---
+# Curriculum
+---------------
 
 ## Experience
 
 
-Nov.2016 - Present
-
-: **Full-Stack Developer** at [Brief Creatives](https://brief.pt)
+Nov.2016 - Present 
+**Full-Stack Developer** at [Brief Creatives](https://brief.pt){:target='_blank'}
 
 : Working in Brief since Nov. 2016, I develop both single pages and WordPress websites with custom themes with simple to advanced backend functionalities.
 
@@ -18,16 +19,14 @@ Nov.2016 - Present
 : Contributed with a WordPress starter theme adapted from Sage v8.5 with Twig integration.
 
 Nov. 2015 – July 2016
-
-: **Web Developer** at [Inédito – Consultores de Comunicação](http://inedito.com.pt)
+**Web Developer** at [Inédito – Consultores de Comunicação](http://inedito.com.pt){:target='_blank'}
 
 : Alongside a team of designers, I was responsible for the full development cycle and maintenance of web sites and newsletters.
 
 : Was also responsible for the company’s server maintenance.
 
 July 2015 – Aug. 2015
-
-: **Summer Intern** at Largestinfo Tunisie
+**Summer Intern** at Largestinfo Tunisie
 
 : With the IAESTE student exchange program, I had the opportunity to work as a web developer intern abroad in Tunis.
 
@@ -36,11 +35,11 @@ July 2015 – Aug. 2015
 ## Education
 
 Sept. 2014 – Jan.2017
-
-: **Post-Grad. Degree** in **Telecommunations and Computer Eng.** at [ISCTE-IUL](https://www.iscte-iul.pt/)
+**Post-Grad. Degree** in **Telecommunations and Computer Eng.**
+: [ISCTE-IUL](https://www.iscte-iul.pt/){:target='_blank'}
 : Final mark: 15/20
 
-Sept. 2011 – July 2014 
-
-: **BSc Degree** in **Telecommunations and Computer Eng.** at [ISCTE-IUL](https://www.iscte-iul.pt/)
+Sept. 2011 – July 2014
+**BSc Degree** in **Telecommunations and Computer Eng.**
+: [ISCTE-IUL](https://www.iscte-iul.pt/){:target='_blank'}
 : Final mark: 14/20
