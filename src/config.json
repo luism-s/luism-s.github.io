@@ -21,7 +21,7 @@
   "devUrl": "http://luism-s.github.local",
   "paths": {
     "source": "assets/",
-    "dist": "../dist/"
+    "dist": "../_site/dist/"
   },
   "watch": [
     "../**/*.html"

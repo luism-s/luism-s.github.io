@@ -24,7 +24,6 @@ body {
   font-weight: 400;
 }
 
-
 h1,
 h2,
 h3,
@@ -77,12 +76,21 @@ p {
   }
 }
 
+dt {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+dl {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
 dd {
   line-height: 1.5em;
   margin-top: 8px;
+  margin-left: 16px;
 
   & + dt {
-    margin-top: 64px;
+    margin-top: 32px;
   }
 
   dt + & {
@@ -108,9 +116,9 @@ ul {
     margin-top: 8px;
   }
 
-
 }
 
-
-
-@include scrollbars(.5em, #929292);
+hr {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
