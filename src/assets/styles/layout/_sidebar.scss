@@ -19,5 +19,29 @@
     background-position: center top;
     background-repeat: no-repeat;
   }
+}
 
+@media (max-width: $bkp-small-max) {
+  .site-sidebar {
+    position: relative;
+
+    &.-collapsed {
+      width: 128px;
+      
+      .photo-icon {
+        width: 64px;
+        height: 64px;
+      }
+
+      .site-navbar > ul > li {
+        &.active {
+          transform: initial;
+        }
+        &::before, 
+        &::after {
+          content: initial;
+        }
+      }
+    }
+  }
 }

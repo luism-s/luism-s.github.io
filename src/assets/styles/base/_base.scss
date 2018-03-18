@@ -20,42 +20,75 @@ body {
   -webkit-font-smoothing: antialiased;
 
   font-size: 1rem;
-  font-family: $primary-font-family;
+  font-family: $text-font-family;
   font-weight: 400;
+}
+
+h1, h2 {
+  &::after {
+    content: '';
+    display: inline-block;
+    height: 1px;
+    width: 100%;
+    background: #eaecef;
+  }
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  font-family: $heading-font-family;
+  font-weight: 600;
 }
 
 h1,
 h2,
-h3,
+h3 {
+  margin-top: 64px;
+  margin-bottom: 32px;
+}
+
 h4,
 h5,
 h6 {
-  margin: 64px 0 32px;
-  font-family: $secondary-font-family;
+  margin-top: 32px;
+  margin-bottom: 16px;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
+  position: relative;
+  &::after {
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+  }
 }
 h2 {
   font-size: 2rem;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &::after {
+    margin-left: 32px;
+  }
 }
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 h4 {
-  font-size: 1.17rem;
+  font-size: 1.5rem;
 }
 h5 {
+  font-size: 1.25rem;
+}
+h6 {
   font-size: 1rem;
-}
-h5 {
-  font-size: 0.83em;
 }
 
 a {
   color: $primary-color;
-  text-decoration: none;
 
   &:hover, &:focus{
     text-decoration: underline;
@@ -70,7 +103,7 @@ a {
 p {
   margin: 0;
   font-size: 1rem;
-  line-height: 1.5em;
+  line-height: $text-line-height;
   & + & {
     margin-top: 8px;
   }
@@ -85,7 +118,7 @@ dl {
   margin-bottom: 16px;
 }
 dd {
-  line-height: 1.5em;
+  line-height: $text-line-height;
   margin-top: 8px;
   margin-left: 16px;
 
@@ -99,7 +132,7 @@ dd {
 }
 
 ul {
-  margin: 0;
+  margin: 8px 0 0 8px;
   padding-left: 0; 
   list-style: none;
   
@@ -111,14 +144,21 @@ ul {
       margin-right: 0.75em;
     }
 
+    > p {
+      display: inline-block;
+    }
+
   }
   > li + li {
     margin-top: 8px;
   }
-
 }
 
 hr {
   margin-top: 8px;
   margin-bottom: 8px;
+}
+
+b, strong {
+  font-weight: 700;
 }

@@ -2,9 +2,10 @@
 layout: default
 title: Contacts
 permalink: /contacts/
+slug: contacts
 ---
 
-## Contacts
+# Contacts
 
 Email: [luis.m.silva@mail.com](mailto:luis.m.silva@mail.com)
 

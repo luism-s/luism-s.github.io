@@ -1,6 +1,7 @@
 ---
 title: Me
 layout: default
+slug: home
 ---
 
 ## Me
@@ -21,6 +22,8 @@ wordpress themes and plugins
 REST API's
 
 I know regex
+
+## Skills
 
 ## Contacts
 

@@ -1,9 +1,3 @@
-$primary-font-family: 'Space Mono', monospace, sans-serif;
-$secondary-font-family: 'Work Sans', Arial, sans-serif;
-
-$primary-color: #1a4374;
-$primary-text-color: #333333;
-
 // Breakpoints
 $bkp-xsmall: 480px;
 $bkp-small: 768px;
@@ -20,3 +14,13 @@ $bkp-medium-max: ($bkp-large - 1) !default;
 $bkp-large-max: ($bkp-xlarge - 1) !default;
 $bkp-xlarge-max: ($bkp-xxlarge - 1) !default;
 $bkp-xxlarge-max: ($bkp-full - 1) !default;
+
+// Fonts
+$text-font-family: 'Work Sans', Arial, sans-serif;
+$heading-font-family: 'Raleway', monospace, sans-serif;
+
+$text-line-height: 1.41421356237em;
+
+// Colors
+$primary-color: #1a4374;
+$primary-text-color: #333333;

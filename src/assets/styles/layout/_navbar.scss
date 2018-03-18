@@ -2,11 +2,16 @@
   
   margin-top: 64px;
 
+  ul {
+    margin: 0;
+  }
   ul > li {
     display: flex;
     align-items: center;
     position: relative;
   
+    transition: transform 0.15s ease-in-out;
+
     &::before, 
     &::after {
       content: "";
@@ -17,7 +22,7 @@
       background-color: white;
       left: 0;
       transform-origin: right center;
-      transition: transform 0.15s ease-in-out;
+      transition: transform 0.15s ease-in-out, opacity 0.15s ease-in-out;
     }
     &::before {
       transform: translate3d(calc( -100% - 0.75em ), 0 , 0) rotateZ(45deg);
@@ -25,21 +30,23 @@
     &::after {
       transform: translate3d(calc( -100% - 0.75em ), 0 , 0) rotateZ(-45deg);
     }
-    &:hover::before,
-    &:hover::after {
-      transform: translate3d(calc( -100% - 0.75em ), 0, 0);
+    &:hover, 
+    &.active {
+      &::before,
+      &::after {
+        transform: translate3d(calc( -100% - 0.75em ), 0, 0);
+        opacity: .75;
+      }
+      transform: translate3d(5px,0,0);
     }
-
+    
     > a {
+      width: 100%;
+      padding: 4px 0;
       position: relative;
       display: inline-block;
       overflow: hidden;
-      padding: 4px 0;
-      width: 100%;
-    }
-    transition: transform 0.15s ease-in-out;
-    &:hover {
-      transform: translate3d(5px,0,0);
+      text-decoration: none;
     }
   }
   ul > li + li {
