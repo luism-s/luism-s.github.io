@@ -27,7 +27,7 @@ body {
 h1, h2 {
   &::after {
     content: '';
-    display: inline-block;
+    display: block;
     height: 1px;
     width: 100%;
     background: #eaecef;
@@ -36,21 +36,25 @@ h1, h2 {
 
 h1, h2, h3,
 h4, h5, h6 {
+  padding-top: $header-top-padding;
   font-family: $heading-font-family;
   font-weight: 600;
+  .site-main > &:first-child {
+    margin-top: 0;
+  }
 }
 
 h1,
 h2,
 h3 {
-  margin-top: 64px;
+  margin-top: calc(64px - #{$header-top-padding});
   margin-bottom: 32px;
 }
 
 h4,
 h5,
 h6 {
-  margin-top: 32px;
+  margin-top: calc(32px - #{$header-top-padding});
   margin-bottom: 16px;
 }
 
@@ -58,9 +62,7 @@ h1 {
   font-size: 2.25rem;
   position: relative;
   &::after {
-    position: absolute;
-    bottom: -16px;
-    left: 0;
+    margin: 16px 0;
   }
 }
 h2 {

@@ -11,33 +11,6 @@
   }
 }
 
-@mixin min-md {
-  @media (min-width: 799px) {
-    @content;
-  }
-}
-@mixin max-md {
-  @media (max-width: 800px) {
-    @content;
-  }
-}
-
-
-@mixin breakpoint-lock(
-  $a,
-  $b,
-  $property,
-  $breakpoint: 800px) {
-
-  @media (max-width: #{$breakpoint}) {
-    #{$property}: #{$a};
-  }
-
-  @media (min-width: #{$breakpoint}) {
-    #{$property}: #{$b};
-  }
-}
-
 @mixin square($width, $height) {
   width: #{$width};
   height: #{$height};

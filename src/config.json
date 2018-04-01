@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "js": [
+      "assets/scripts/vendor/iscroll-lite.js",
       "node_modules/jquery/dist/jquery.min.js",
       "assets/scripts/main.js"
     ],

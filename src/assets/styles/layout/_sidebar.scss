@@ -1,47 +1,67 @@
 .site-sidebar {
-  width: 256px;
-  min-height: 100vh;
-  padding-top: 64px;
+
+  width: 100%;
+  padding: 16px 0px 16px 16px;
+  margin-bottom: 32px;
 
   display: flex;
-  flex-direction: column;
   align-items: center;
+
+  position: relative;
 
   background-color: $primary-color;
   color: white;
 
   .photo-icon {
-    width: 128px;
-    height: 128px;
+
+    width: 64px;
+    height: 64px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
 
     background-image: url("../images/eu.jpg");
     background-size: 165%;
     background-position: center top;
     background-repeat: no-repeat;
+
+    &-wrapper {
+      position: relative;
+    }
   }
 }
 
-@media (max-width: $bkp-small-max) {
+@media only screen and (min-width: $bkp-small) {
+
   .site-sidebar {
-    position: relative;
+    width: 128px;
+    min-height: 100vh;
+    padding: 32px 0;
+    margin-bottom: 0;
 
-    &.-collapsed {
+    flex-direction: column;
+
+    .site-navbar {
+      margin-top: 64px;
+      margin-left: initial;
+    }
+    
+    .photo-icon {
+      position: initial;
+    }
+  }
+}
+
+@media only screen and (min-width: $bkp-medium) {
+
+  .site-sidebar {
+
+    width: 256px;
+    padding: 64px 0;
+    .photo-icon {
       width: 128px;
-      
-      .photo-icon {
-        width: 64px;
-        height: 64px;
-      }
-
-      .site-navbar > ul > li {
-        &.active {
-          transform: initial;
-        }
-        &::before, 
-        &::after {
-          content: initial;
-        }
-      }
+      height: 128px;  
     }
   }
 }

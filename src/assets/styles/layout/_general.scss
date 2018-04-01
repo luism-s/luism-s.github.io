@@ -1,0 +1,40 @@
+.sidebar-main-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-footer-wrapper {
+  flex: 1;
+  padding-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.site-main {
+  max-width: 1024px;
+  padding: 16px 16px 32px;
+}
+
+.site-footer {
+  text-align: center;
+}
+
+@media only screen and (min-width: $bkp-small) {
+
+  .sidebar-main-wrapper {
+    flex-direction: row;
+  }
+
+  .site-main {
+    max-width: 1024px;
+    padding: 32px 32px 64px;
+  }
+}
+
+@media only screen and (min-width: $bkp-medium) {
+  
+  .site-main {
+    padding: 64px 64px 128px;
+  }
+}
