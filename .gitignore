@@ -24,3 +24,5 @@ nbproject
 !.env.example
 
 npm-debug.log
+
+/_site
