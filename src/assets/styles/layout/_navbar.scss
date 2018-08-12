@@ -1,137 +1,134 @@
 .site-navbar {
 
-  width: calc(100% + 16px * 3);
-
-  position: relative;
-  left: 0;
-
-  > ul {
-    overflow: hidden;
-    > li {
-      &::before, 
-      &::after {
-        content: initial;
-      }
-    }
-  } 
-
-  ul {
-    margin: 0;
-    display: flex;
-    li + li {
-      margin-top: initial;
-    }
-  }
-
-  li {
-
-    white-space: nowrap;
-    &:not(:last-of-type) {
-      margin-right: 16px;
-    }
-
-    > a {
-      padding: 4px;
-      position: relative;
-      display: inline-block;
-      text-decoration: none;
-    }
-  }
-
-  &-wrapper {
-    overflow: hidden;
-    margin-left: calc(64px + 16px);
-  }
-
-  .site-sidebar &-wrapper {
-    width: calc(100% + 16px * 2);
     position: relative;
-  }
+    left: 0;
+
+    > ul {
+        overflow: hidden;
+        > li {
+            &::before, 
+            &::after {
+                content: initial;
+            }
+        }
+    } 
+
+    ul {
+        margin: 0;
+        display: flex;
+        li + li {
+            margin-top: initial;
+        }
+    }
+
+    li {
+
+        white-space: nowrap;
+        &:not(:last-of-type) {
+            margin-right: 16px;
+        }
+
+        > a {
+            padding: 4px;
+            position: relative;
+            display: inline-block;
+            text-decoration: none;
+        }
+    }
+
+    &-wrapper {
+        overflow: hidden;
+        margin-left: calc(64px + 16px);
+    }
+
+    .site-sidebar &-wrapper {
+        width: calc(100% + 16px * 2);
+        position: relative;
+    }
 }
 
 @media only screen and (min-width: $bkp-small) {
 
-  .site-navbar {
+    .site-navbar {
 
-    position: static;
-    width: initial;
-    display: flex;
-    justify-content: center;
+        position: static;
+        width: initial;
+        display: flex;
+        justify-content: center;
 
-    // Reset styles from iScrolljs
-    transition-timing-function: initial !important;
-    transition-duration: initial !important;
-    transform: initial !important;
+        // Reset styles from iScrolljs
+        transition-timing-function: initial !important;
+        transition-duration: initial !important;
+        transform: initial !important;
 
-    ul {
-      display: inline-block;
-      li + li {
-        margin-top: 16px;
-        margin-left: initial;
-      }
+        ul {
+            display: inline-block;
+            li + li {
+                margin-top: 16px;
+                margin-left: initial;
+            }
+        }
+
+        li {
+            
+            &:not(:last-of-type) {
+                margin-right: initial;
+            }
+            
+            > a {
+                width: 100%;
+                overflow: hidden;
+            }
+        }
+        
+        .site-sidebar &-wrapper {
+            position: static;
+            margin-left: initial;
+            // Reset styles from iScrolljs
+            touch-action: initial !important;
+        }
     }
-
-    li {
-      
-      &:not(:last-of-type) {
-        margin-right: initial;
-      }
-      
-      > a {
-        width: 100%;
-        overflow: hidden;
-      }
-    }
-    
-    .site-sidebar &-wrapper {
-      position: static;
-      margin-left: initial;
-      // Reset styles from iScrolljs
-      touch-action: initial !important;
-    }
-  }
 }
 
 @media only screen and (min-width: $bkp-medium) {
-  .site-navbar > ul {
 
-    > li {
-  
-      display: flex;
-      align-items: center;
-      position: relative;
-      justify-content: center;
-      padding-left: 16px;
-  
-      &::before, 
-      &::after {
-        content: "";
-        margin: 0;
-        width: 4px;
-        height: 1px;
-        position: absolute;
-        background-color: white;
-        left: 0;
-        transform-origin: right center;
-        transition: transform 0.15s ease-in-out, opacity 0.15s ease-in-out;
-      }
-      &::before {
-        transform: rotateZ(45deg);
-      }
-      &::after {
-        transform: rotateZ(-45deg);
-      }
-      &:hover, 
-      &.active {
-  
-        transition: transform 0.15s ease-in-out;
-        transform: translate3d(5px,0,0);
-        &::before,
-        &::after {
-          transform: translate3d(0, 0, 0);
-          opacity: .75;
+    .site-navbar > ul {
+
+        > li {
+    
+            display: flex;
+            align-items: center;
+            position: relative;
+            justify-content: center;
+            padding-left: 16px;
+    
+            &::before, 
+            &::after {
+                content: "";
+                margin: 0;
+                width: 4px;
+                height: 1px;
+                position: absolute;
+                background-color: white;
+                left: 0;
+                transform-origin: right center;
+                transition: transform 0.15s ease-in-out, opacity 0.15s ease-in-out;
+            }
+            &::before {
+                transform: rotateZ(45deg);
+            }
+            &::after {
+                transform: rotateZ(-45deg);
+            }
+            &:hover, 
+            &.active {
+
+                &::before,
+                &::after {
+                    transform: translate3d(0, 0, 0);
+                    opacity: .75;
+                }
+            }
         }
-      }
     }
-  }
 }

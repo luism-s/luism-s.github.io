@@ -1,166 +1,166 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 ::selection {
-  background: #333333;
-  color: #fff;
+    background: #333333;
+    color: #fff;
 }
 
 html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  font-size: 16px;
-  color: $primary-text-color;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 16px;
+    color: $primary-text-color;
 }
 
 body {
-  margin: 0;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+    margin: 0;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
 
-  font-size: 1rem;
-  font-family: $text-font-family;
-  font-weight: 400;
+    font-size: 1rem;
+    font-family: $text-font-family;
+    font-weight: 400;
 }
 
 h1, h2 {
-  &::after {
-    content: '';
-    display: block;
-    height: 1px;
-    width: 100%;
-    background: #eaecef;
-  }
+    &::after {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 100%;
+        background: #eaecef;
+    }
 }
 
 h1, h2, h3,
 h4, h5, h6 {
-  padding-top: $header-top-padding;
-  font-family: $heading-font-family;
-  font-weight: 600;
-  .site-main > &:first-child {
-    margin-top: 0;
-  }
+    padding-top: $header-top-padding;
+    font-family: $heading-font-family;
+    font-weight: 600;
+    .site-main > &:first-child {
+        margin-top: 0;
+    }
 }
 
 h1,
 h2,
 h3 {
-  margin-top: calc(64px - #{$header-top-padding});
-  margin-bottom: 32px;
+    margin-top: calc(64px - #{$header-top-padding});
+    margin-bottom: 32px;
 }
 
 h4,
 h5,
 h6 {
-  margin-top: calc(32px - #{$header-top-padding});
-  margin-bottom: 16px;
+    margin-top: calc(32px - #{$header-top-padding});
+    margin-bottom: 16px;
 }
 
 h1 {
-  font-size: 2.25rem;
-  position: relative;
-  &::after {
-    margin: 16px 0;
-  }
+    font-size: 2.25rem;
+    position: relative;
+    &::after {
+        margin: 16px 0;
+    }
 }
 h2 {
-  font-size: 2rem;
-  
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    font-size: 2rem;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-  &::after {
-    margin-left: 32px;
-  }
+    &::after {
+        margin-left: 32px;
+    }
 }
 h3 {
-  font-size: 1.75rem;
+    font-size: 1.75rem;
 }
 h4 {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 h5 {
-  font-size: 1.25rem;
+    font-size: 1.25rem;
 }
 h6 {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 a {
-  color: $primary-color;
+    color: $primary-color;
 
-  &:hover, &:focus{
-    text-decoration: underline;
-    outline: none;
-  }
+    &:hover, &:focus{
+        text-decoration: underline;
+        outline: none;
+    }
 
-  .avoid-color-conflict & {
-    color: white;
-  }
+    .avoid-color-conflict & {
+        color: white;
+    }
 }
 
 p {
-  margin: 0;
-  font-size: 1rem;
-  line-height: $text-line-height;
-  & + & {
-    margin-top: 8px;
-  }
+    margin: 0;
+    font-size: 1rem;
+    line-height: $text-line-height;
+    & + & {
+        margin-top: 8px;
+    }
 }
 
 dt {
-  margin-top: 8px;
-  margin-bottom: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 dl {
-  margin-top: 16px;
-  margin-bottom: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 dd {
-  line-height: $text-line-height;
-  margin-top: 8px;
-  margin-left: 16px;
+    line-height: $text-line-height;
+    margin-top: 8px;
+    margin-left: 16px;
 
-  & + dt {
-    margin-top: 32px;
-  }
+    & + dt {
+        margin-top: 32px;
+    }
 
-  dt + & {
-    margin-top: 16px;
-  }
+    dt + & {
+        margin-top: 16px;
+    }
 }
 
 ul {
-  margin: 8px 0 0 8px;
-  padding-left: 0; 
-  list-style: none;
-  
-  > li {
-    font-size: 1rem;
-     
-    &::before {
-      content: "-";
-      margin-right: 0.75em;
-    }
+    margin: 8px 0 0 8px;
+    padding-left: 0; 
+    list-style: none;
+    
+    > li {
+        font-size: 1rem;
+         
+        &::before {
+            content: "-";
+            margin-right: 0.75em;
+        }
 
-    > p {
-      display: inline-block;
-    }
+        > p {
+            display: inline-block;
+        }
 
-  }
-  > li + li {
-    margin-top: 8px;
-  }
+    }
+    > li + li {
+        margin-top: 8px;
+    }
 }
 
 hr {
-  margin-top: 8px;
-  margin-bottom: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 b, strong {
-  font-weight: 700;
+    font-weight: 700;
 }

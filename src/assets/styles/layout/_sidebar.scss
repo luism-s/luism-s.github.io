@@ -1,67 +1,67 @@
 .site-sidebar {
 
-  width: 100%;
-  padding: 16px 0px 16px 16px;
-  margin-bottom: 32px;
+    width: 100%;
+    padding: 16px 0px 16px 16px;
+    margin-bottom: 32px;
 
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 
-  position: relative;
+    position: relative;
 
-  background-color: $primary-color;
-  color: white;
+    background-color: $primary-color;
+    color: white;
 
-  .photo-icon {
+    .photo-icon {
 
-    width: 64px;
-    height: 64px;
+        width: 64px;
+        height: 64px;
 
-    position: absolute;
-    top: 0;
-    left: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
 
-    background-image: url("../images/eu.jpg");
-    background-size: 165%;
-    background-position: center top;
-    background-repeat: no-repeat;
+        background-image: url("../images/eu.jpg");
+        background-size: 165%;
+        background-position: center top;
+        background-repeat: no-repeat;
 
-    &-wrapper {
-      position: relative;
+        &-wrapper {
+            position: relative;
+        }
     }
-  }
 }
 
 @media only screen and (min-width: $bkp-small) {
 
-  .site-sidebar {
-    width: 128px;
-    min-height: 100vh;
-    padding: 32px 0;
-    margin-bottom: 0;
+    .site-sidebar {
+        width: 128px;
+        min-height: 100vh;
+        padding: 32px 0;
+        margin-bottom: 0;
 
-    flex-direction: column;
+        flex-direction: column;
 
-    .site-navbar {
-      margin-top: 64px;
-      margin-left: initial;
+        .site-navbar {
+            margin-top: 64px;
+            margin-left: initial;
+        }
+        
+        .photo-icon {
+            position: initial;
+        }
     }
-    
-    .photo-icon {
-      position: initial;
-    }
-  }
 }
 
 @media only screen and (min-width: $bkp-medium) {
 
-  .site-sidebar {
+    .site-sidebar {
 
-    width: 256px;
-    padding: 64px 0;
-    .photo-icon {
-      width: 128px;
-      height: 128px;  
+        width: 256px;
+        padding: 64px 0;
+        .photo-icon {
+            width: 128px;
+            height: 128px;    
+        }
     }
-  }
 }
