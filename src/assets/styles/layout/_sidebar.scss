@@ -1,7 +1,7 @@
 .site-sidebar {
 
     width: 100%;
-    padding: 16px 0px 16px 16px;
+    padding: 8px 16px;
     margin-bottom: 32px;
 
     display: flex;
@@ -18,16 +18,22 @@
         height: 64px;
 
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
 
         background-image: url("../images/eu.jpg");
-        background-size: 165%;
+        background-size: 150%;
         background-position: center top;
         background-repeat: no-repeat;
 
+        box-shadow: 0 2px 16px 2px rgba(51, 51, 51, 0.32);
+        
         &-wrapper {
-            position: relative;
+            height: 100%;
+            position: absolute;
+            left: 16px;
+            bottom: 0;
+            transform: translate(0, 50%);
         }
     }
 }
@@ -35,6 +41,7 @@
 @media only screen and (min-width: $bkp-small) {
 
     .site-sidebar {
+
         width: 128px;
         min-height: 100vh;
         padding: 32px 0;
@@ -49,6 +56,13 @@
         
         .photo-icon {
             position: initial;
+            box-shadow: initial;
+            transform: initial;
+            &-wrapper {
+                height: initial;
+                position: initial;
+                transform: initial;
+            }
         }
     }
 }

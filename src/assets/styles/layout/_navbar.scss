@@ -2,9 +2,22 @@
 
     position: relative;
     left: 0;
+    margin: 8px 0;
+
+
+    @media only screen and (max-width: $bkp-xsmall-max) {
+        display: none;
+        &.-mobile-closed {
+            display: block;
+        }
+    }
+    
 
     > ul {
-        overflow: hidden;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
         > li {
             &::before, 
             &::after {
@@ -14,8 +27,6 @@
     } 
 
     ul {
-        margin: 0;
-        display: flex;
         li + li {
             margin-top: initial;
         }
@@ -24,9 +35,6 @@
     li {
 
         white-space: nowrap;
-        &:not(:last-of-type) {
-            margin-right: 16px;
-        }
 
         > a {
             padding: 4px;
@@ -38,12 +46,32 @@
 
     &-wrapper {
         overflow: hidden;
-        margin-left: calc(64px + 16px);
     }
 
-    .site-sidebar &-wrapper {
-        width: calc(100% + 16px * 2);
+    .site-sidebar &-wrapper {   
+        width: 100%;
         position: relative;
+    }
+
+    &-hamburguer {
+        width: 32px;
+        height: 32px;
+        margin-left: auto;
+
+        padding: 4px;
+        position: relative;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+
+        cursor: pointer;
+
+        > .line {
+            height: 1px;
+            width: 100%;
+            display: block;
+            background-color: white;
+        }
     }
 }
 
@@ -55,11 +83,6 @@
         width: initial;
         display: flex;
         justify-content: center;
-
-        // Reset styles from iScrolljs
-        transition-timing-function: initial !important;
-        transition-duration: initial !important;
-        transform: initial !important;
 
         ul {
             display: inline-block;
@@ -84,8 +107,10 @@
         .site-sidebar &-wrapper {
             position: static;
             margin-left: initial;
-            // Reset styles from iScrolljs
-            touch-action: initial !important;
+        }
+
+        &-hamburguer {
+            display: none;
         }
     }
 }
