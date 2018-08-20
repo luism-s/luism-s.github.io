@@ -2,8 +2,7 @@
 
     position: relative;
     left: 0;
-    margin: 8px 0;
-
+    margin: 16px 0 0;
 
     @media only screen and (max-width: $bkp-xsmall-max) {
         display: none;
@@ -12,12 +11,11 @@
         }
     }
     
-
     > ul {
         margin: 0;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
         > li {
             &::before, 
             &::after {
@@ -37,7 +35,7 @@
         white-space: nowrap;
 
         > a {
-            padding: 4px;
+            padding: 8px;
             position: relative;
             display: inline-block;
             text-decoration: none;
@@ -99,6 +97,7 @@
             }
             
             > a {
+                padding: 4px;
                 width: 100%;
                 overflow: hidden;
             }
