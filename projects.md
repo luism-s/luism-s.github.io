@@ -9,7 +9,7 @@ slug: projects
 
 ## Live Websites
 
-##### vertias.art
+##### veritas.art
 
 Business Website and shop for a national renowned art auction house.
 

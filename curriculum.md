@@ -70,7 +70,7 @@ My main task was to redesign and develop the new front-end of the company’s we
 
 Sept. 2014 – Jan. 2017
 
-**Telecommunations and Computer Eng.** @ [ISCTE-IUL](https://www.iscte-iul.pt/){:target='_blank'}\\
+**Telecommunications and Computer Eng.** @ [ISCTE-IUL](https://www.iscte-iul.pt/){:target='_blank'}\\
 Final mark: 15/20
 
 **Extracurricular Activities:**
@@ -82,7 +82,7 @@ Final mark: 15/20
 
 Sept. 2011 – July 2014
 
-**Telecommunations and Computer Eng.** @ [ISCTE-IUL](https://www.iscte-iul.pt/){:target='_blank'}\\
+**Telecommunications and Computer Eng.** @ [ISCTE-IUL](https://www.iscte-iul.pt/){:target='_blank'}\\
 Final mark: 14/20
 
 **Award:** Best graduate student
