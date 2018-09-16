@@ -4,24 +4,16 @@ layout: default
 slug: home
 ---
 
-## Me
+# Luís Silva | Full-Stack Developer
 
-Luís Silva\\
-Full Stack Developer
+Graduated from computer science and informatics where I experienced many technologies, and mostly self-taught in the field of web development where I apply my academic knowledge, industry good practices and creativity.
 
-computer science degree
-self-taught web development
-had summer internship
-work as a full-stack developer
-digital and creative field
+I first got into the field through small projects and an internship; started to work afterwards as a developer for digital and creative agencies, while doing a bit of freelance work.
 
-2 years of experience
-front-end to back-end development 
-landing pages
-wordpress themes and plugins
-REST API's
+With about 3 years of experience, I’ve been working from front-end to back-end development including, landing pages, custom Wordpress themes and plugins, REST API's, etc.
 
-I know regex
+Being a supporter of open source technologies, I contributed to a couple of public projects and published some personal ones on Githug (https://github.com/luism-s).
+
 
 ## Skills
 
