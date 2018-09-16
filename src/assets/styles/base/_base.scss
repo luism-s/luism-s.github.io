@@ -29,7 +29,7 @@ h1, h2 {
         content: '';
         display: block;
         height: 1px;
-        width: 100%;
+        flex: 1;
         background: #eaecef;
     }
 }
@@ -74,6 +74,7 @@ h2 {
 
     &::after {
         margin-left: 32px;
+        flex: 1;
     }
 }
 h3 {
@@ -135,21 +136,13 @@ dd {
 
 ul {
     margin: 8px 0 0 8px;
-    padding-left: 0; 
-    list-style: none;
+    padding-left: 16px;
     
     > li {
         font-size: 1rem;
-         
-        &::before {
-            content: "-";
-            margin-right: 0.75em;
-        }
-
         > p {
             display: inline-block;
         }
-
     }
     > li + li {
         margin-top: 8px;
