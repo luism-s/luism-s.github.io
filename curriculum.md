@@ -7,6 +7,9 @@ slug: curriculum
 
 # Curriculum
 
+* [Experience](#experience)
+* [Education](#education)
+
 ## Experience
 
 ##### Nov. 2016 - Present
@@ -33,7 +36,7 @@ My main task was to redesign and develop the new front-end of the company’s we
 
 ## Education
 
-##### Post-Grad. Degree
+##### Post-Graduation Degree
 
 Sept. 2014 – Jan. 2017
 
@@ -45,7 +48,7 @@ Final mark: 15/20
 * Co-Head Organizer at [FISTA’16](https://fista.iscte-iul.pt/2016/){:target='_blank'}
 * Member at [IEEE ISCTE-IUL Student Branch](http://ieee.iscte-iul.pt/){:target='_blank'}
 
-##### BSc Degree
+##### Bachelor Degree
 
 Sept. 2011 – July 2014
 
