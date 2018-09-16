@@ -43,6 +43,11 @@
         }
     }
 }
+@media print {
+    .site-sidebar {
+        display: none;
+    }
+}
 
 @media only screen and (min-width: $bkp-small) {
 
