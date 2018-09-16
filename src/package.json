@@ -13,8 +13,7 @@
     }
   ],
   "scripts": {
-    "build": "gulp",
-    "build-prod": "npm install && gulp --prod",
+    "build": "gulp --prod",
     "watch": "gulp clean && gulp watch"
   },
   "devDependencies": {
