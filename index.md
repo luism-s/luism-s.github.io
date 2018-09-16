@@ -14,13 +14,14 @@ With about 3 years of experience, I’ve been working from front-end to back-end
 
 Being a supporter of open source technologies, I contributed to a couple of public projects and published some personal ones on Githug (https://github.com/luism-s).
 
-
-## Skills
+\\
+Read about my [projects](/projects) or check my [curriculum](/curriculum).
 
 ## Contacts
 
 Email: [luis.m.silva@mail.com](mailto:luis.m.silva@mail.com)
 
+Linkedin: [linkedin.com/in/luis-m-silva](https://www.linkedin.com/in/luis-m-silva){:target='_blank'}
+
 Github: [github.com/luism-s](https://github.com/luism-s){:target='_blank'}
 
-Linkedin: [linkedin.com/in/luis-m-silva](https://www.linkedin.com/in/luis-m-silva){:target='_blank'}

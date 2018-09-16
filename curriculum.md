@@ -7,8 +7,38 @@ slug: curriculum
 
 # Curriculum
 
+* [Skills](#skills--competences)
 * [Experience](#experience)
 * [Education](#education)
+
+
+## Skills & Competences
+
+#### Web
+* HTML5, CSS3
+* Javascript
+* REST API's
+* AJAX
+* LAMP Stack (Linux, Apache, MySQL, PHP)
+* WordPress
+* Twig
+* Packet managers: NPM, Bower, Composer
+* Gulp/Grunt task runners
+* CSS pre-processors: SASS/LESS
+
+#### IT
+
+* Linux
+* Vagrant
+* Git, 
+* MVC, OOP
+* Python, Java
+* Adobe Photoshop/Illustrator
+
+#### Languages
+* Portuguese (Native)
+* English (Fluent)
+* German (A1)
 
 ## Experience
 

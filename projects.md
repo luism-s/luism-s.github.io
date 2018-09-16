@@ -50,7 +50,7 @@ This website.
 
 * Presentation
 * Projects and curriculum listing
-* All style measures are powers of 2 (1, 2, 4, 8, 16 ... 1024), for fun
+* All style measures are powers of 2 (1, 2, 4, 8, 16 ... 1024)
 
 ## Open Source
 
