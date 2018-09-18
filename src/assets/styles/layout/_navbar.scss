@@ -4,13 +4,6 @@
     left: 0;
     margin: 16px 0 0;
 
-    @media only screen and (max-width: $bkp-xsmall-max) {
-        display: none;
-        &.-mobile-closed {
-            display: block;
-        }
-    }
-    
     > ul {
         margin: 0;
         padding-left: 0;
@@ -18,23 +11,21 @@
         flex-direction: column;
         align-items: center;
         > li {
-            &::before, 
-            &::after {
+            &::before {
                 content: initial;
             }
         }
     } 
 
     ul {
+        list-style: none;
         li + li {
             margin-top: initial;
         }
     }
 
     li {
-
         white-space: nowrap;
-
         > a {
             padding: 8px;
             position: relative;
@@ -72,11 +63,16 @@
             background-color: white;
         }
     }
-}
 
-@media only screen and (min-width: $bkp-small) {
 
-    .site-navbar {
+    @media only screen and (max-width: $bkp-xsmall-max) {
+        display: none;
+        &.-mobile-closed {
+            display: block;
+        }
+    }
+    
+    @media only screen and (min-width: $bkp-small) {
 
         position: static;
         width: initial;
@@ -113,13 +109,10 @@
             display: none;
         }
     }
-}
 
-@media only screen and (min-width: $bkp-medium) {
+    @media only screen and (min-width: $bkp-medium) {
 
-    .site-navbar > ul {
-
-        > li {
+        ul > li {
     
             display: flex;
             align-items: center;
@@ -127,8 +120,7 @@
             justify-content: center;
             padding-left: 16px;
     
-            &::before, 
-            &::after {
+            &::before {
                 content: "";
                 margin: 0;
                 width: 4px;
@@ -139,15 +131,9 @@
                 transform-origin: right center;
                 transition: transform 0.15s ease-in-out, opacity 0.15s ease-in-out;
             }
-            &::before {
-                transform: rotateZ(45deg);
-            }
-            &::after {
-                transform: rotateZ(-45deg);
-            }
+
             &:hover, 
             &.active {
-
                 &::before,
                 &::after {
                     transform: translate3d(0, 0, 0);

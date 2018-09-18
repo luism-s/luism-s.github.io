@@ -5,7 +5,7 @@ permalink: /contacts/
 slug: contacts
 ---
 
-# Contacts
+# CONTACTS
 
 Email: [luis.m.silva@mail.com](mailto:luis.m.silva@mail.com)
 

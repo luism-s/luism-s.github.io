@@ -39,7 +39,7 @@
             position: absolute;
             left: 16px;
             bottom: 0;
-            transform: translate(0, 50%);
+            transform: translate(0, 50%) rotateY(180deg);
         }
     }
 }
@@ -70,7 +70,7 @@
         .photo-icon {
             position: initial;
             box-shadow: initial;
-            transform: initial;
+            transform: rotateY(180deg);
             &-wrapper {
                 height: initial;
                 position: initial;
@@ -83,7 +83,6 @@
 @media only screen and (min-width: $bkp-medium) {
 
     .site-sidebar {
-
         width: 256px;
         padding: 64px 0;
         .photo-icon {
