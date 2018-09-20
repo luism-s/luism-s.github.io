@@ -1,11 +1,30 @@
-**Jekyll:**
 
-* Install Bundler and Jekyll: `gem install bundler jekyll`
-* Install Jekyll deps: `bundle install`
-* Run Jekyll watcher: `bundle exec jekyll serve`
+# Build
 
-**Assets**
+## **Jekyll**
 
-* `cd src`
-* `npm install`
-* `npm run watch`
+Install 
+
+````
+$ gem install bundler jekyll
+$ bundle install
+````
+
+Build
+
+````
+$ bundle exec jekyll build
+````
+Watch
+
+````
+$ bundle exec jekyll serve
+````
+
+## **Assets**
+
+````
+$ cd src
+$ npm install
+$ npm run watch
+````
