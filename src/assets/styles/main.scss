@@ -1,15 +1,18 @@
-@import 'config/animations';
-@import 'config/mixins';
-@import 'config/variables';
-
-@import 'base/geral';
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/grid';
+@import 'base/base';
+@import 'base/utils';
 
 @import 'components/titles';
 @import 'components/icons';
 @import 'components/buttons';
 
+@import 'layout/general';
 @import 'layout/footer';
+@import 'layout/navbar';
 @import 'layout/section';
+@import 'layout/sidebar';
 
-@import 'layout/sections/presentation';
 @import 'layout/sections/contacts';
+@import 'layout/sections/presentation';

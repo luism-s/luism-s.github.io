@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "js": [
-      "node_modules/jquery/dist/jquery.min.js",
+      "assets/scripts/vendor/iscroll-lite.js",
       "assets/scripts/main.js"
     ],
     "css": [
@@ -24,6 +24,6 @@
     "dist": "../dist/"
   },
   "watch": [
-      "../*.html"
+    "../**/*.html"
   ]
 }

@@ -25,4 +25,8 @@ nbproject
 
 npm-debug.log
 
-/_site
+_site
+dist
+.sass-cache
+.jekyll-metadata
+

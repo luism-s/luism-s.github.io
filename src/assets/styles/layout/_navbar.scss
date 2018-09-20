@@ -1,0 +1,145 @@
+.site-navbar {
+
+    position: relative;
+    left: 0;
+    margin: 16px 0 0;
+
+    > ul {
+        margin: 0;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        > li {
+            &::before {
+                content: initial;
+            }
+        }
+    } 
+
+    ul {
+        list-style: none;
+        li + li {
+            margin-top: initial;
+        }
+    }
+
+    li {
+        white-space: nowrap;
+        > a {
+            padding: 8px;
+            position: relative;
+            display: inline-block;
+            text-decoration: none;
+        }
+    }
+
+    &-wrapper {
+        overflow: hidden;
+    }
+
+    .site-sidebar &-wrapper {   
+        width: 100%;
+        position: relative;
+    }
+
+    &-hamburguer {
+        width: 32px;
+        height: 32px;
+        margin-left: auto;
+
+        padding: 4px;
+        position: relative;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+
+        cursor: pointer;
+
+        > .line {
+            height: 1px;
+            width: 100%;
+            display: block;
+            background-color: white;
+        }
+    }
+
+
+    @media only screen and (max-width: $bkp-xsmall-max) {
+        display: none;
+        &.-mobile-closed {
+            display: block;
+        }
+    }
+    
+    @media only screen and (min-width: $bkp-small) {
+
+        position: static;
+        width: initial;
+        display: flex;
+        justify-content: center;
+
+        ul {
+            display: inline-block;
+            li + li {
+                margin-top: 16px;
+                margin-left: initial;
+            }
+        }
+
+        li {
+            
+            &:not(:last-of-type) {
+                margin-right: initial;
+            }
+            
+            > a {
+                padding: 4px;
+                width: 100%;
+                overflow: hidden;
+            }
+        }
+        
+        .site-sidebar &-wrapper {
+            position: static;
+            margin-left: initial;
+        }
+
+        &-hamburguer {
+            display: none;
+        }
+    }
+
+    @media only screen and (min-width: $bkp-medium) {
+
+        ul > li {
+    
+            display: flex;
+            align-items: center;
+            position: relative;
+            justify-content: center;
+            padding-left: 16px;
+    
+            &::before {
+                content: "";
+                margin: 0;
+                width: 4px;
+                height: 1px;
+                position: absolute;
+                background-color: white;
+                left: 0;
+                transform-origin: right center;
+                transition: transform 0.15s ease-in-out, opacity 0.15s ease-in-out;
+            }
+
+            &:hover, 
+            &.active {
+                &::before,
+                &::after {
+                    transform: translate3d(0, 0, 0);
+                    opacity: .75;
+                }
+            }
+        }
+    }
+}

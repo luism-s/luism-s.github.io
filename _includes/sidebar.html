@@ -1,0 +1,25 @@
+
+<aside class="site-sidebar avoid-color-conflict" id="site-sidebar">
+
+    <a class="photo-icon-wrapper" href="/"><div class="photo-icon"></div></a>
+
+    <div class="site-navbar-wrapper" id="site-navbar-wrapper">
+        
+        <nav class="site-navbar" id="navbar">
+            <ul>
+                <li class="{% if page.slug == "home" %}active{% endif %}"><a href="/" class="js-menu-item reset-link">Me</a></li>
+                <li class="{% if page.slug == "projects" %}active{% endif %}"><a href="/projects" class="js-menu-item reset-link">Projects</a></li>
+                <li class="{% if page.slug == "curriculum" %}active{% endif %}"><a href="/curriculum" class="js-menu-item reset-link">Curriculum</a></li>
+                <li class="{% if page.slug == "contacts" %}active{% endif %}"><a href="/contacts" class="js-menu-item reset-link">Contacts</a></li>
+            </ul>
+        </nav>
+
+        <div class="site-navbar-hamburguer" id="navbar-hamburguer">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+
+    </div>
+    
+</aside> <!-- /sidebar -->
