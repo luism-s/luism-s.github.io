@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#navbar-hamburguer").on("click",function(n){$("#navbar").toggleClass("-mobile-closed")})});
