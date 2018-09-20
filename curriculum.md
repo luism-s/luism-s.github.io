@@ -18,6 +18,7 @@ slug: curriculum
 
 While working at Brief I developed both single pages and WordPress websites with custom themes with simple to advanced backend functionalities.
 
+* Developed projects in Wordpress and in micro-framework (Slim, Lumen)
 * Introduced the usage of the Twig template engine in Wordpress theme development, using the [Timber](https://timber.github.io/docs/) plugin.
 * Contributed with a WordPress starter theme adapted from Sage v8.5 with Twig integration.
 
@@ -26,7 +27,7 @@ While working at Brief I developed both single pages and WordPress websites with
 
 **Web Developer** at [Inédito – Consultores de Comunicação](http://inedito.com.pt){:target='_blank'}
 
-Working in close relation with a team of designers, I was responsible for the development of both websites and newsletters. While there was also tasked with performing webserver maintenance.
+Working in close relation with a team of designers, I was responsible for the development of both Wordpress websites and newsletters. While there was also tasked with performing Linux webserver maintenance. 
 
 #### July 2015 – Aug. 2015
 
@@ -37,14 +38,11 @@ Through the IAESTE programme I had the opportunity to work as a web developer in
 My main task was to redesign and develop a new front-end for the company’s web portal.
 
 
-## Skills & CSketch
+## Skills & Competences
 
-Adobe Photoshop/Illustrator
 
 #### Web
-* HTML5, CSS3Sketch
-
-Adobe Photoshop/Illustrator
+* HTML5, CSS3
 * Javascript
 * REST API's
 * AJAX

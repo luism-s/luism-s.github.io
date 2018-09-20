@@ -13,7 +13,7 @@ slug: projects
 
 ##### veritas.art
 
-Business Website and shop for a national renowned art auction house.
+Business website and shop for a national renowned art auction house.
 
 * Auctions timeline
 * Lots list and filtering
@@ -25,30 +25,20 @@ Link: [https://veritas.art](https://veritas.art){:target='_blank'}
 
 ##### brief.pt
 
-Business Website for a digital and creative agency
+Company website for a digital and creative agency
 
 * Reusable modules across pages
 * Projects showcase and navigation
 * Job postings
+* Made with Wordpress, using [TimberSage](https://github.com/luism-s/TimberSage){:target='_blank'}
 
 \\
 Link: [https://brief.pt](https://brief.pt){:target='_blank'}
 
 
-##### portal.costaestoril.cruzvermelha.pt
-
-Institutional blog for the Portuguese Red Cross
-
-* Institution blog postings
-* Archives
-
-\\
-Link: [https://portal.costaestoril.cruzvermelha.pt](https://portal.costaestoril.cruzvermelha.pt){:target='_blank'}
-
-
 ##### luism-s.github.io
 
-This website.
+This website
 
 * Presentation, projects and curriculum listing
 * All style measures are powers of 2 (1, 2, 4, 8, 16 ... 1024)
