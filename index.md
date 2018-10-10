@@ -13,16 +13,15 @@ With 3 years of experience, I’ve been working from front-end to back-end devel
 
 I'm passionate for clean code, smart and sustainable development, and problem solving.
 
-Being a supporter of open source technologies, I contribute to public projects and published some personal ones on [Github](https://github.com/luism-s){:target='_blank'}.
+Being a supporter of open source technologies, I contribute to public projects and published some personal ones on [Github](https://github.com/luism-s){:target='_blank'}{:onclick="trackEvent('click', 'contact', 'github');"}.
 
 \\
 Read about my [projects](/projects) or check my [curriculum](/curriculum).
 
 ## Contacts
 
-Email: [luis.m.silva@mail.com](mailto:luis.m.silva@mail.com)
+Email: [luis.m.silva@mail.com](mailto:luis.m.silva@mail.com){:onclick="trackEvent('click', 'contact', 'email');"}
 
-Linkedin: [linkedin.com/in/luis-m-silva](https://www.linkedin.com/in/luis-m-silva){:target='_blank'}
+Github: [github.com/luism-s](https://github.com/luism-s){:target='_blank'}{:onclick="trackEvent('click', 'contact', 'github');"}
 
-Github: [github.com/luism-s](https://github.com/luism-s){:target='_blank'}
-
+Linkedin: [linkedin.com/in/luis-m-silva](https://www.linkedin.com/in/luis-m-silva){:target='_blank'}{:onclick="trackEvent('click', 'contact', 'linkedin');"}

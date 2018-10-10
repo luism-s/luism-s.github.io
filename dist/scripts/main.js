@@ -1,1 +1,1 @@
-$(document).ready(function(){$("#navbar-hamburguer").on("click",function(n){$("#navbar").toggleClass("-mobile-closed")})});
+function trackEvent(e,n,t){gtag("event",e,{event_category:n,event_label:t})}$(document).ready(function(){$("#navbar-hamburguer").on("click",function(e){$("#navbar").toggleClass("-mobile-closed")})});
