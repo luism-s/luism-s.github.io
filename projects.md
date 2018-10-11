@@ -35,6 +35,16 @@ Company website for a digital and creative agency
 \\
 Link: [https://brief.pt](https://brief.pt){:target='_blank'}{:onclick="trackEvent('click', 'project', 'brief');"}
 
+##### arnica.thrombocid.pt
+
+Landing page to promote a new product of a pharmaceutical company
+
+* Smooth product showcase across the page
+* Interactive slider
+* Made with [myboilerplate](#myboilerplate)
+
+\\
+Link: [https://arnica.thrombocid.pt](https://arnica.thrombocid.pt){:target='_blank'}{:onclick="trackEvent('click', 'project', 'thrombocid-arnica');"}
 
 ##### luism-s.github.io
 
