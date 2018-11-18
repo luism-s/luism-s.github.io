@@ -32,6 +32,10 @@ exclude:
   - Gemfile.lock
   - node_modules
   - src
+  - gulp
+  - package.json
+  - package-lock.json
+  - yarn.lock
   - dist/images/sites/
   - vendor/bundle/
   - vendor/cache/
