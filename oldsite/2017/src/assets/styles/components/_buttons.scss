@@ -6,9 +6,9 @@
     width: 1em;
     height: 1em;
     position: relative;
-    
+
     &:hover {
-      
+
       &::after {
         transform: rotate(-45deg);
       }
@@ -19,7 +19,7 @@
 
     &::after, &::before {
       content: '';
-      @include square(1px, 1em);
+      @include rectangle(1px, 1em);
       background: #333;
       font-weight: bold;
       display: inline-block;

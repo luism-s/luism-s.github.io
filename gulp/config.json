@@ -1,0 +1,39 @@
+{
+  "dependencies": {
+    "js": [
+      "./src/scripts/main.js"
+    ],
+    "css": [
+      "node_modules/normalize.css/normalize.css",
+      "./src/styles/main.scss"
+    ],
+    "fonts": [
+      "./src/fonts/**/*"
+    ],
+    "images": [
+      "./src/images/**/*"
+    ]
+  },
+  "jslintFiles": [
+      "./src/scripts/main.js"
+  ],
+  "devUrl": "http://luism-s.github.local",
+  "paths": {
+    "source": "./src",
+    "dist": "./dist"
+  },
+  "watch": [
+    "./**/*.html"
+  ],
+  "zip": {
+    "name": "luism-s-github-io.zip",
+    "files": [
+      "./**/*",
+      "!./.git",
+      "!./.gitignore",
+      "!./src/**",
+      "!./node_modules/**"
+    ],
+    "dest": "../"
+  }
+}

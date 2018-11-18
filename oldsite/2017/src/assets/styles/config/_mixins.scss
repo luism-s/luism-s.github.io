@@ -45,7 +45,7 @@
   }
 }
 
-@mixin square($width, $height) {
+@mixin rectangle($width, $height) {
   width: #{$width};
   height: #{$height};
 }

@@ -1,0 +1,93 @@
+.site-sidebar {
+
+  width: 100%;
+  padding: 8px 16px;
+  margin-bottom: 32px;
+
+  display: flex;
+  align-items: center;
+  z-index: 1;
+
+  background-color: $primary-color;
+  color: white;
+
+  @media (max-width: $bkp-xsmall-max) {
+    position: absolute;
+    + .main-footer-wrapper {
+      margin-top: calc(32px * 2 + 8px * 2)
+    }
+  }
+
+  .photo-icon {
+
+    width: 64px;
+    height: 64px;
+
+    position: absolute;
+    top: 50%;
+    transform: translate(-100%, -50%);
+
+    background-image: url("../images/eu.jpg");
+    background-size: 150%;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    box-shadow: 0 2px 16px 2px rgba(51, 51, 51, 0.32);
+
+    &-wrapper {
+      height: 100%;
+      position: absolute;
+      left: 16px;
+      bottom: 0;
+      transform: translate(0, 50%) rotateY(180deg);
+    }
+  }
+}
+@media print {
+  .site-sidebar {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: $bkp-small) {
+
+  .site-sidebar {
+
+    width: 128px;
+    min-height: 100vh;
+    padding: 32px 0;
+    margin-bottom: 0;
+
+    position: relative;
+
+    flex-direction: column;
+
+    .site-navbar {
+      margin-top: 64px;
+      margin-left: initial;
+    }
+
+    .photo-icon {
+      position: initial;
+      box-shadow: initial;
+      transform: rotateY(180deg);
+      &-wrapper {
+        height: initial;
+        position: initial;
+        transform: initial;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $bkp-medium) {
+
+  .site-sidebar {
+    width: 256px;
+    padding: 64px 0;
+    .photo-icon {
+      width: 128px;
+      height: 128px;
+    }
+  }
+}

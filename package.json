@@ -1,0 +1,48 @@
+{
+  "name": "myboilerplate",
+  "version": "1.0.0",
+  "author": "Luís Silva <luis.m.silva@mail.com>",
+  "description": "A Boilerplate aimed to make the starting of simple projects easier and faster",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luism-s/myboilerplate"
+  },
+  "scripts": {
+    "build": "gulp --prod",
+    "watch": "gulp clean && gulp watch"
+  },
+  "engines": {
+    "node": ">= 8.12"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-eslint": "^5.0.0",
+    "gulp-filelog": "^0.4.1",
+    "gulp-flatten": "^0.4.0",
+    "gulp-if": "^2.0.1",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-less": "^4.0.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sequence": "^0.4.6",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-uglify": "^2.1.2",
+    "gulp-zip": "^4.2.0",
+    "lazypipe": "^1.0.1",
+    "minimist": "^1.1.3",
+    "require-dir": "^0.3.1",
+    "run-sequence": "^2.2.1",
+    "sass-module-importer": "^1.4.0"
+  },
+  "dependencies": {
+    "normalize.css": "^5.0.0"
+  }
+}
