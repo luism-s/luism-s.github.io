@@ -42,26 +42,26 @@ My main task was to redesign and develop a new front-end for the company’s web
 
 
 #### Web
-* HTML5, CSS3
 * Javascript
+* HTML5, CSS3
 * REST API's
-* AJAX
-* Packet managers: NPM, Bower, Composer
-* Gulp/Grunt task runners
-* CSS preprocessors: SASS/LESS
-* Apache/NGINX
+* ReactJS
+* SCSS (BEVM methodology)
+* Web Servers: Apache/NGINX
 * MySQL
-* PHP
-* PHP frameworks (Slim, Lumen)
+* PHP & PHP frameworks (Slim, Lumen)
 * WordPress
 * Twig
+* Gulp/Grunt task runners
+* Packet managers: npm/yarn, Composer
 
 #### IT
-* Linux
+* Linux, Linux CLI
 * Vagrant
-* Git version control, 
+* Git version control 
 * MVC, OOP
 * Python, Java, Regex
+* Network analysis (Wireshark)
 
 #### Design Tools
 * Sketch
