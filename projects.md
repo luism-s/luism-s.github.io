@@ -46,13 +46,22 @@ Landing page to promote a new product of a pharmaceutical company
 \\
 Link: [https://arnica.thrombocid.pt](https://arnica.thrombocid.pt){:target='_blank'}{:onclick="trackEvent('click', 'project', 'thrombocid-arnica');"}
 
+##### 24 Game
+
+World famous [24 Game](https://en.wikipedia.org/wiki/24_Game)
+
+Made with [ReactJS](https://reactjs.org/){:target='_blank'} and published on [Github](https://github.com/luism-s/luism-s.github.io){:target='_blank'}
+
+Play @ [https://luism-s.github.io/jogo-do-24/](https://luism-s.github.io/jogo-do-24/){:target='_blank'}{:onclick="trackEvent('click', 'project', 'jogo-do-24-page');"}
+
 ##### luism-s.github.io
 
 This website
 
 * Presentation, projects and curriculum listing
 * All style measures are powers of 2 (1, 2, 4, 8, 16 ... 1024)
-* Made with [Jekyll](https://jekyllrb.com/){:target='_blank'} and published on [Github](https://github.com/luism-s/luism-s.github.io){:target='_blank'}
+* Made with [Jekyll](https://jekyllrb.com/){:target='_blank'} and published on [Github](https://github.com/luism-s/jogo-do-24){:target='_blank'}
+
 
 ## Open Source
 
