@@ -48,9 +48,9 @@ Link: [https://arnica.thrombocid.pt](https://arnica.thrombocid.pt){:target='_bla
 
 ##### 24 Game
 
-World famous [24 Game](https://en.wikipedia.org/wiki/24_Game)
+World famous 24 Game.
 
-Made with [ReactJS](https://reactjs.org/){:target='_blank'} and published on [Github](https://github.com/luism-s/jogo-do-24){:target='_blank'}
+Made with ReactJS and published on [Github](https://github.com/luism-s/jogo-do-24){:target='_blank'}
 
 Play @ [https://luism-s.github.io/jogo-do-24/](https://luism-s.github.io/jogo-do-24/){:target='_blank'}{:onclick="trackEvent('click', 'project', 'jogo-do-24-page');"}
 
