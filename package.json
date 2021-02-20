@@ -13,7 +13,7 @@
     "watch": "gulp clean && gulp watch"
   },
   "engines": {
-    "node": ">= 8.12"
+    "node": "8.*"
   },
   "devDependencies": {
     "browser-sync": "^2.18.8",

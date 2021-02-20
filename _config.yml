@@ -24,6 +24,8 @@ markdown: kramdown
 
 google_analytics: UA-111711838-1
 
+include: ['_pages']
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
