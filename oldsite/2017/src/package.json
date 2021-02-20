@@ -33,7 +33,7 @@
     "gulp-sourcemaps": "^2.6.2",
     "gulp-uglify": "^3.0.1",
     "lazypipe": "^1.0.1",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.3",
     "require-dir": "^0.3.2",
     "run-sequence": "^2.2.0",
     "sass-module-importer": "^1.4.0"
