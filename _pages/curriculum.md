@@ -11,10 +11,9 @@ slug: curriculum
 
 **Front-end Developer** at [Adidas](https://adidas.com){:target='_blank'}
 
-Working in a SCRUM team to deliver an internal web application tool for creating moodboard and presentations.
+Working along a SCRUM team to deliver an internal web application for creating moodboards and presentations. I took the project frontend team lead role and drove a major refactor of legacy code.
 
-* Web applications development (React JS/Typesc)
-* Project’s front-end team leading
+* Development in React JS, Redux and Typescript
 * Code reviews, task estimation, user story refinement
 * Conducting interviews for the front-end team
 
@@ -22,23 +21,26 @@ Working in a SCRUM team to deliver an internal web application tool for creating
 
 **Full-Stack Developer** at [Brief Creatives](https://brief.pt){:target='_blank'}
 
-Developed landing pages and WordPress websites with custom themes, with simple to advanced backend functionalities.
-
-* Developed WordPress themes and plugins
-* Introduced the usage of the Twig template engine in WordPress theme development, using the [Timber](https://timber.github.io/docs/) plugin.
-* Contributed with a WordPress starter theme adapted from Sage v8.5 with Twig integration.
+While at Brief I worked in closely with designers and clients to deliver engaging UIs, and with my peers to modernize the tech workflow and tools.
+* WordPress development (themes and plugins)
+* Introduced the [Timber](https://timber.github.io/docs/) development library for WP
+* Introduced a new WP starter theme based in [Sage](https://github.com/roots/sage) (v8.5) with Timber
+* Worked with PHP micro-frameworks (Slim, Lumen)
 * Introduced Gitflow as git branching methodology
 
 #### Nov. 2015 – July 2016 (9 mon.)
 
 **Web Developer** at [Inédito – Consultores de Comunicação](http://inedito.com.pt){:target='_blank'}
 
-Working with a team of designers, I was responsible for the development of WordPress websites, landing pages and newsletters.
+At Inédito I worked as a single developer with a team of designers to create commercial websites and online campaigns.
+* WordPress development
+* Websites maintenance
+* Linux server maintenance
 
 #### July 2015 – Aug. 2015 (2 mon.)
 
 **Summer Intern** at Largestinfo Tunisie
 
-Through the IAESTE programme I had the opportunity to work as a web developer intern in for a marktinSketch
+Through the IAESTE programme I had the opportunity to work as a web developer intern in for a publicity company.
 
 My main task was to redesign and develop a new front-end for the company’s web portal.
