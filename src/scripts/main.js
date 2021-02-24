@@ -1,9 +1,6 @@
-$(document).ready(function () {
-
-  $('#navbar-hamburguer').on('click', function (e) {
-    $('#navbar').toggleClass('-mobile-closed');
-  });
-});
+function toggleNavbar() {
+  document.getElementById('navbar').classList.toggle('-mobile-closed');
+}
 
 function trackEvent(action, category, label) {
   gtag('event', action, {
